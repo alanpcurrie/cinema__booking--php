@@ -14,5 +14,15 @@
     "lodash": "^4.14.0",
     "vue": "^1.0.26",
     "vue-resource": "^0.9.3"
-  }
+  },
+  "name": "icinema",
+  "version": "1.0.0",
+  "description": "laravel cinema project",
+  "main": "index.js",
+  "repository": {
+    "url": "https://github.com/usedfuturedigital/cinema__booking--php.git",
+    "type": "git"
+  },
+  "author": "Alan Currie",
+  "license": "MIT"
 }
