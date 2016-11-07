@@ -1,6 +1,6 @@
 const elixir = require('laravel-elixir');
-
 require('laravel-elixir-vue');
+require('laravel-elixir-image-optimize');
 
 /*
  |--------------------------------------------------------------------------
@@ -13,7 +13,31 @@ require('laravel-elixir-vue');
  |
  */
 
+//enable source maps
+elixir.config.sourcemaps = true;
+//compile sass
+elixir(function(mix) {
+    mix.sass('app.scss')
+            .version('public/css/app.css')
+            .webpack('app.js');
+
+});
+
+//transpile & concat scripts
+// elixir(function(mix) {
+//     mix.rollup(['app.js'], './public/foo/bar/min.js');
+// });
+
 elixir(mix => {
     mix.sass('app.scss')
        .webpack('app.js');
+});
+//optimize images
+if (elixir.config.production)(function(mix) {
+    mix.imageOptimize();
+});
+
+//browser sync
+elixir(function(mix) {
+    mix.browserSync({proxy: 'icinema.dev'});
 });

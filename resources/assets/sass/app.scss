@@ -1,9 +1,14 @@
+//Bourbon for flavour :)
+@import "node_modules/bourbon/app/assets/stylesheets/bourbon";
+//Neat for grid
+@import "node_modules/bourbon-neat/app/assets/stylesheets/neat";
 
-// Fonts
-@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
-
-// Variables
-@import "variables";
-
-// Bootstrap
-@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+// sass partials
+@import "_settings/_settings";
+@import "_tools/_tools";
+@import "00_base/_base";
+@import "01_atom/_atom";
+@import "02_molecule/_molecule";
+@import "03_organism/_organism";
+@import "04_template/_template";
+@import "05_page/_page";
