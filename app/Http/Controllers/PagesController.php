@@ -19,8 +19,8 @@ class PagesController extends Controller
         return view('/pages/contact');
     }
 
-    public function movie()
+    public function feature()
     {
-        return view('/pages/movie');
+        return view('/pages/feature');
     }
 }

@@ -1,14 +1,14 @@
 <section class ="movie-picker">
+<section class ="movie-picker__section">
 
   <div class="dropdown">
     <div class="dropdown-container">
-      <p class="dropdown-description">Date/p>
+      <p class="dropdown-description">Date</p>
       <p class="dropdown-button">Click to Select</p>
       <ul class="dropdown-menu dropdown-select">
-        <li>Dropdown Menu Item</li>
-        <li>Another Item</li>
-        <li>Item Three</li>
-        <li>The Last One</li>
+        <form action="">
+          <input type="date" name="date">
+        </form>
       </ul>
     </div>
   </div>
@@ -24,7 +24,8 @@
       <li>The Last One</li>
     </ul>
   </div>
-</div>
+  </div>
+
 
 
 <div class="dropdown">
@@ -39,47 +40,90 @@
     </ul>
   </div>
 </div>
-    <a class = "moviepicker__button--red">BOOK NOW</a>
-
+    <button class = "a-moviepicker__button--red"><a href="#">BOOK NOW</a></button>
 </section>
-<section class ="movie-cards">
-<div class="cards">
-  <div class="card">
-    <div class="card-image">
+</section>
+
+
+<section class ="m-movie-cards">
+<div class="m-cards">
+  <div class="m-card">
+    <div class="m-card-image">
       <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png" alt="">
     </div>
-    <div class="card-header">
+    <div class="m-card-header">
       First Card
     </div>
 
-    <div class="card-copy">
+    <div class="m-card-copy">
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, officiis sunt neque facilis culpa molestiae necessitatibus delectus veniam provident.</p>
     </div>
   </div>
 
-  <div class="card">
-    <div class="card-image">
+  <div class="m-card">
+    <div class="m-card-image">
       <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains-4.png" alt="">
     </div>
-    <div class="card-header">
+    <div class="m-card-header">
       Another Card
     </div>
-    <div class="card-copy">
+    <div class="m-card-copy">
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, officiis sunt neque facilis culpa molestiae necessitatibus delectus veniam provident.</p>
     </div>
   </div>
 
-  <div class="card">
-    <div class="card-image">
+  <div class="m-card">
+    <div class="m-card-image">
       <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains-3.png" alt="">
     </div>
-    <div class="card-header">
+    <div class="m-card-header">
       The Last Card
     </div>
-    <div class="card-copy">
+    <div class="m-card-copy">
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
     </div>
   </div>
 </div>
 </section>
+
+
+<section class ="m-movie-cards">
+<div class="m-cards">
+  <div class="m-card">
+    <div class="m-card-image">
+      <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png" alt="">
+    </div>
+    <div class="m-card-header">
+      First Card
+    </div>
+
+    <div class="m-card-copy">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, officiis sunt neque facilis culpa molestiae necessitatibus delectus veniam provident.</p>
+    </div>
+  </div>
+
+  <div class="m-card">
+    <div class="m-card-image">
+      <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains-4.png" alt="">
+    </div>
+    <div class="m-card-header">
+      Another Card
+    </div>
+    <div class="m-card-copy">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, officiis sunt neque facilis culpa molestiae necessitatibus delectus veniam provident.</p>
+    </div>
+  </div>
+
+  <div class="m-card">
+    <div class="m-card-image">
+      <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains-3.png" alt="">
+    </div>
+    <div class="m-card-header">
+      The Last Card
+    </div>
+    <div class="m-card-copy">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+    </div>
+  </div>
+</div>
 </section>

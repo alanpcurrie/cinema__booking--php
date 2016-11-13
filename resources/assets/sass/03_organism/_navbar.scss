@@ -24,7 +24,7 @@ Layouts
 
     ul {
         list-style-type: none;
-        background: $color-primary;
+        background: $color-mid-grey;
         padding-left: 0.2rem;
     }
 
@@ -36,7 +36,7 @@ Layouts
         padding: 1em;
 
         &:hover {
-            background: scale-color($color-primary, $lightness: -5%);
+            background: scale-color($color-mid-grey, $lightness: -5%);
         }
     }
 }
@@ -84,7 +84,7 @@ Layouts
 
         &:focus,
         &:hover {
-            background: blue;
+            background: $color-mid-grey;
         }
 
         &.toggle-on:after {
@@ -100,8 +100,31 @@ Layouts
         &:before {
             font-family: 'Fontawesome';
             -webkit-font-smoothing: antialiased;
-            content: '\f08e';
+
         }
+
+        //login
+        //---------------------
+
+        &[href*="#account"]::before {
+            content: '\f007';
+            padding-right: .2rem;
+        }
+
+        &[href*="#login"]::before {
+            content: '\f007';
+            padding-right: .4rem;
+        }
+
+
+        &[href*="#register"]::before {
+            content: '\f08e';
+            padding-right: .4rem;
+        }
+
+
+        //social
+        //---------------------
 
         &[href*="dribbble.com"]::before {
             content: '\f17d';
@@ -202,7 +225,7 @@ Layouts
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    background: $color-primary;
+    background: $color-mid-grey;
     -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
@@ -288,7 +311,7 @@ Layouts
 
         &:focus,
         &:hover {
-            background: $color-primary;
+            background: $color-mid-grey;
         }
 
         &.toggle-on:after {

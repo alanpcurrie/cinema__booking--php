@@ -11,12 +11,13 @@
 |
 */
 
-//Default route
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-
 Route::get('/', 'PagesController@home');
 Route::get('about', 'PagesController@about');
 Route::get('contact', 'PagesController@contact');
-Route::get('movie', 'PagesController@movie');
+
+Route::get('feature', 'PagesController@feature');
+Route::get('movie', 'MovieController@index');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');

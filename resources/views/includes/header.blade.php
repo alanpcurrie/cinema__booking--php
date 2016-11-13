@@ -15,7 +15,7 @@
                         </ul>
                     </li>
                     <li class="has-children">
-                        <a class="ink" href="#">Classes<button class="dropdown-toggle" aria-expanded="false"><span class="screen-reader-text">Expand child menu</span></button></a>
+                        <a class="ink" href="#">Movies<button class="dropdown-toggle" aria-expanded="false"><span class="screen-reader-text">Expand child menu</span></button></a>
                         <ul class="sub-menu">
                             <li><a class="ink" href="">More</a></li>
                             <li><a class="ink" href="">About</a></li>
@@ -24,7 +24,7 @@
 
                         </ul>
                     </li>
-                    <li><a class="ink" href="#">Apply<button class="dropdown-toggle" aria-expanded="false"><span class="screen-reader-text">Expand child menu</span></button></a>
+                    <li><a class="ink" href="#">Locations<button class="dropdown-toggle" aria-expanded="false"><span class="screen-reader-text">Expand child menu</span></button></a>
                         <ul class="sub-menu">
                             <li><a class="ink" href="">More</a></li>
                             <li><a class="ink" href="">About</a></li>
@@ -38,11 +38,17 @@
             <!-- #multi-level-nav .multi-level-nav -->
             <nav id="social-menu" class="social-menu" role="navigation">
                 <ul>
-                    <li><a class="ink" href="http://twitter.com"><span class="screen-reader-text">Twitter</span></a></li>
-                    <li><a class="ink" href="http://facebook.com"><span class="screen-reader-text">Facebook</span></a></li>
-                    <li><a class="ink" href="http://linkedin.com"><span class="screen-reader-text">LinkedIn</span></a></li>
-                    <li><a class="ink" href="http://youtube.com"><span class="screen-reader-text">YouTube</span></a></li>
-                    <li><a class="ink" href="http://instagram.com"><span class="screen-reader-text">Instagram</span></a></li>
+                    <li>
+                      <form class="a-search-bar" role="search">
+                        <input type="search" placeholder="Enter Search" />
+                        <button type="submit">
+                          <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/search-icon-black.png" alt="Search Icon">
+                        </button>
+                      </form>
+                    </li>
+                    <li><a  href="#register">register<span class="screen-reader-text"></span></a></li>
+                    <li><a  href="#login">login<span class="screen-reader-text">sign in</span></a></li>
+
                 </ul>
             </nav>
             <!-- .social-menu -->

@@ -1,6 +1,8 @@
+
 .main-grid{
   padding-top:3rem;
   padding-bottom:3rem;
+
 }
 
 
@@ -16,13 +18,16 @@
   $flex-box-gutter: 0.4em;
   $flex-box-width: 18em;
   $flex-box-color: transparentize($base-font-color, 0.3);
+
   $flex-box-top-colors:
-    tomato,
-    #72BFBF,
-    #92B1E3,
-    #E3D743,
-    #CCC,
-    #F6C05C;
+      $color-thistle-purple,
+      $color-mint-cream-green,
+      $color-burly-wood-brown,
+      $color-misty-rose-pink,
+      $color-corn-silk-yellow,
+      $color-peach-puff-orange;
+
+
 
   @include clearfix;
   align-items: stretch;

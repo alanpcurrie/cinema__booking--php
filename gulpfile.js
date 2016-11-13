@@ -2,6 +2,8 @@ const elixir = require('laravel-elixir');
 require('laravel-elixir-vue');
 require('laravel-elixir-image-optimize');
 
+
+
 /*
  |--------------------------------------------------------------------------
  | Elixir Asset Management
@@ -32,10 +34,14 @@ elixir(mix => {
     mix.sass('app.scss')
        .webpack('app.js');
 });
-//optimize images
+optimize images
 if (elixir.config.production)(function(mix) {
     mix.imageOptimize();
 });
+
+// elixir(function(mix) {
+//     mix.imageOptimize();
+// });
 
 //browser sync
 elixir(function(mix) {

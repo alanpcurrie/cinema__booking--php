@@ -1,3 +1,20 @@
+//General-colors
+$color-black: #000000;
+$color-mid-grey: #696969;
+$color-rosy-brown: #BC8F8F;
+$color-burly-wood-brown: #deb887;
+$color-white: #ffffff;
+$color-seashell-white: #FFF5EE;
+$color-honey-dew-white: #f0fff0;
+$color-old-lace-white: #fdf5e6;
+$color-snow-white: #fffafa;
+$color-misty-rose-pink: #ffe4e1;
+$color-corn-silk-yellow: #fff8dc;
+$color-thistle-purple: #d8bfd8;
+$color-peach-puff-orange: #ffdab9;
+$color-papaya-whip-orange: #ffefd5;
+$color-mint-cream-green: #f5fffa;
+
 // Body
 $body-bg: #f5f8fa;
 
@@ -21,7 +38,7 @@ $color-danger:  #bf5329;
 $navbar-default-bg: #fff;
 
 // Buttons
-$btn-default-color: $text-color;
+$btn-default-color: $color-rosy-brown;
 
 // Inputs
 $input-border: lighten($text-color, 40%);

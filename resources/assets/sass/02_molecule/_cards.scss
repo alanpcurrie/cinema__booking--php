@@ -1,14 +1,16 @@
-.movie-cards{
-
+.m-movie-cards{
+margin-top: 2rem;
+padding: 2rem;
+background-color: $color-mid-grey;
 }
 
-.cards {
+.m-cards {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
 
-.card {
+.m-card {
   $base-border-color: gainsboro !default;
   $base-border-radius: 3px !default;
   $base-background-color: white !default;
@@ -35,7 +37,7 @@
   position: relative;
   transition: all 0.2s ease-in-out;
 
-  .card-image {
+  .m-card-image {
     background-color: $card-image-hover-color;
     height: 150px;
     max-height: 150px;
@@ -49,7 +51,7 @@
     }
   }
 
-  .card-header {
+  .m-card-header {
     background-color: $card-header-background;
     border-bottom: $card-border;
     border-radius: $base-border-radius $base-border-radius 0 0;
@@ -59,7 +61,7 @@
     transition: all 0.2s ease-in-out;
   }
 
-  .card-copy {
+   .m-card-copy {
     font-size: 0.9em;
     line-height: 1.5em;
     padding: ($base-spacing / 2) ($base-spacing / 2);
@@ -81,7 +83,7 @@
   &:active {
     background-color: $card-background;
 
-    .card-header {
+     .m-card-header {
       background-color: $card-background;
     }
   }
