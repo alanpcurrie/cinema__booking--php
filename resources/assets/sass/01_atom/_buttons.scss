@@ -14,6 +14,25 @@ background: $color-rosy-brown;
 padding: 20px;
 cursor: pointer;
 
+	&-admin {
+		display: inline-flex;
+		vertical-align:middle;
+		margin-top: 3rem;
+		text-align: center;
+		text-decoration: none;
+		font-size: 20px;
+		color: white;
+		letter-spacing: 0.1em;
+		border-radius: 3px;
+		@include transition(all 300ms);
+		background: $color-rosy-brown;
+		padding: 20px;
+		cursor: pointer;
+		&:hover {
+			box-shadow: 0 0 0 2px $color-seashell-white, 0 0 0 4px $color-rosy-brown;
+		}
+	}
+
 	&:hover {
 		box-shadow: 0 0 0 2px $color-mid-grey, 0 0 0 4px $color-rosy-brown;
 	}

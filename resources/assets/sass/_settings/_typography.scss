@@ -1,12 +1,9 @@
 // Typography
-$font-family-sans-serif: "Raleway", sans-serif;
+// mixin @include font-weight(weight); to add weight to raleway
+$font-family-sans-serif: "raleway", sans-serif;
 $font-size-base: 16px;
 $line-height-base: 1.6;
 $text-color: #636b6f;
-$font-sans-serif-light: "Raleway 300";
-$font-sans-serif-medium: "Raleway 400";
-$font-sans-serif-dark: "Raleway 700";
-$font-sans-serif-bold: "Raleway 900";
 $font-heading-decorative: "industry-inc-3d";
 $font-heading-primary: "industry-inc-base";
 $font-heading-alternate: "postino-std";
@@ -15,6 +12,8 @@ html {
     font-size: $font-size-base;
     font-family: $helvetica;
 }
+
+
 
 body {
     background-color: white;
@@ -32,12 +31,14 @@ h1,
 h2,
 h3,
 h4 {
+    font-family: $font-heading-primary;
     margin: 1.414em 0 0.5em;
     font-weight: inherit;
     line-height: 1.2;
 }
 
 h1 {
+    font-family: $font-heading-primary;
     margin-top: 0;
     font-size: 3.998em;
 }

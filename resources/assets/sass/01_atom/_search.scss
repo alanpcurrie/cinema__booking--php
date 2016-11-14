@@ -1,39 +1,46 @@
 form.a-search-bar {
-  ///////////////////////////////////////////////////////////////////////////////////
-  $base-spacing: 1.5em !default;
-  $base-border-color: gainsboro !default;
-  $base-line-height: 1.5em !default;
-  //////////////////////////////////////////////////////////////////////////////////
 
-  $search-bar-border-color: $base-border-color;
-  $search-bar-border: 1px solid $search-bar-border-color;
-  $search-bar-background: lighten($search-bar-border-color, 10%);
-
-  position: relative;
-
-  input[type=search] {
-    appearance: none;
-    background-color: white;
-    border: 1px solid $base-border-color;
-    box-sizing: border-box;
-    display: block;
-    font-size: 1em;
-    font-style: italic;
-    margin-top: 0.5em;
-    padding: ($base-spacing / 3) ($base-spacing / 3);
+    $base-spacing: 1.5em !default;
+    $base-border-color: gainsboro !default;
+    $base-line-height: 1.5em !default;
+    $search-bar-border-color: $base-border-color;
+    $search-bar-border: 1px solid $search-bar-border-color;
+    $search-bar-background: lighten($search-bar-border-color, 10%);
     position: relative;
-    transition: border-color;
-    width: 100%;
-  }
 
-  button[type=submit] {
-    @include position(absolute, 0 0 0 null);
-    outline: none;
-    padding: 5px 10px;
-
-    img {
-      height: 12px;
-      opacity: 0.7;
+    input[type=search] {
+        @include font-weight(light);
+        font-family:$font-family-sans-serif;
+        font-style: italic;
+        appearance: none;
+        background-color: white;
+        border: 1px solid $base-border-color;
+        box-sizing: border-box;
+        display: block;
+        font-size: 1em;
+        margin-top: .5em;
+        padding: ($base-spacing / 3) ($base-spacing / 3);
+        position: relative;
+        transition: border-color;
+        width: 100%;
     }
-  }
+
+    button[type=submit] {
+        @include position(absolute, 0 0 0 null);
+        outline: none;
+        padding: 5px 10px;
+
+        img {
+            height: 16px;
+            padding-right: 1.25rem;
+            opacity: 0.5;
+
+            &:hover {
+                opacity: 0.8;
+                transform: scale(1.1);
+                transition: all 200ms ease-in-out;
+
+            }
+        }
+    }
 }

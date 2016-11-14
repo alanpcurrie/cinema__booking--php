@@ -7,7 +7,6 @@
 			<div>
 						{{ $movie->id ." " . $movie->title }}
 
-
 			</div>
 		@endforeach
 @stop

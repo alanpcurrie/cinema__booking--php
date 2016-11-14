@@ -16,7 +16,9 @@ Route::get('about', 'PagesController@about');
 Route::get('contact', 'PagesController@contact');
 
 Route::get('feature', 'PagesController@feature');
+Route::get('admin', 'PagesController@admin');
 Route::get('movie', 'MovieController@index');
+
 
 Auth::routes();
 

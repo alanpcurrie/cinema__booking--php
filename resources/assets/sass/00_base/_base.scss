@@ -1,1 +1,28 @@
+body {
+ background-color: darken($color-mid-grey, 5%);
+}
 
+
+// body:before, body:after {
+//     content: "";
+//     position: fixed;
+//
+//     background-image: -webkit-gradient(
+// 	linear,
+// 	left bottom,
+// 	right bottom,
+// 	color-stop(0, rgb(216, 191, 216)),
+// 	color-stop(0.61, rgb(255, 239, 213)),
+// 	color-stop(0.73, rgb(255, 248, 220)),
+// 	color-stop(0.94, rgb(240, 255, 240))
+// );
+// background-image: -o-linear-gradient(right, rgb(216, 191, 216) 0%, rgb(255, 239, 213) 61%, rgb(255, 248, 220) 73%, rgb(240, 255, 240) 94%);
+// background-image: -moz-linear-gradient(right, rgb(216, 191, 216) 0%, rgb(255, 239, 213) 61%, rgb(255, 248, 220) 73%, rgb(240, 255, 240) 94%);
+// background-image: -webkit-linear-gradient(right, rgb(216, 191, 216) 0%, rgb(255, 239, 213) 61%, rgb(255, 248, 220) 73%, rgb(240, 255, 240) 94%);
+// background-image: -ms-linear-gradient(right, rgb(216, 191, 216) 0%, rgb(255, 239, 213) 61%, rgb(255, 248, 220) 73%, rgb(240, 255, 240) 94%);
+// background-image: linear-gradient(to right, rgb(216, 191, 216) 0%, rgb(255, 239, 213) 61%, rgb(255, 248, 220) 73%, rgb(240, 255, 240) 94%);
+//     left: 0;
+//     right: 0;
+//     height: 10px;
+//     z-index: 1000000000;
+// }

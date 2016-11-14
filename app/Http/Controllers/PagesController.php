@@ -23,4 +23,9 @@ class PagesController extends Controller
     {
         return view('/pages/feature');
     }
+
+    public function admin()
+    {
+        return view('/accounts/admin');
+    }
 }

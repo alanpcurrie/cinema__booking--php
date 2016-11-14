@@ -1,23 +1,20 @@
 .hero {
 	height: 50%;
-	width:100%;
+	width: 100%;
 	padding-bottom: 2rem;
-
-
 }
 //no-repeat center center fixed;
-.background {
 
+.background {
 	width: 100%;
 	height: 50rem;
-	background-image: url('/images/2001-A-Space-Odyssey-2.jpg');
+	@include background-image (url('/images/2001-A-Space-Odyssey-2.jpg') );
 	background-color: $color-rosy-brown;
 	background-blend-mode: screen; //multiply works well too...
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center center fixed;
 }
-
 // .inner-scratch,
 // .outer-scratch {
 // 	height: inherit;
@@ -73,7 +70,7 @@ h1 {
 	-webkit-animation: 3s fade;
 	animation: 3s fade;
 	background-color: hsla(360, 100%, 100%, 0.5);
-	padding-bottom: 2rem;
+	padding-bottom: 3rem;
 
 	span {
 		display: inline-block;
@@ -86,7 +83,7 @@ h1 {
 			width: 110%;
 			margin-left: -5%;
 			margin-bottom: 5%;
-			border-top: 1px solid $color-mid-grey;
+			border-top: 1px solid $color-black;
 			-webkit-animation: 2.5s draw;
 			animation: 2.5s draw;
 		}

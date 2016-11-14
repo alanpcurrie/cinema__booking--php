@@ -1,0 +1,69 @@
+$mobile: new-breakpoint(max-width 480px);
+$desktop: new-breakpoint(min-width 850px);
+
+body {
+	background-color: $color-white;
+}
+
+.p-wrapper {
+	@include outer-container(100%);
+
+	.p-primary {
+		@include span-columns(4);
+		padding: 10rem;
+		background-color: darken($color-white, 2%);
+		height: 100vh;
+		@include media($mobile) {
+			 @include span-columns(12);
+		}
+	}
+
+	.p-secondary {
+		@include span-columns(8);
+		padding: 10rem 5rem 10rem 2.5rem;
+		background-color: $color-white;
+		height: 100vh;
+		@include media($mobile) {
+			 @include span-columns(12);
+		}
+	}
+}
+
+form {
+	display: flex;
+}
+
+form > div {
+	flex: 1;
+	min-width: 0;
+	/* fix for min-width: auto */
+}
+
+form > div + div {
+	margin-left: 1em;
+}
+/* 2- fluid inputs */
+div > p {
+	display: flex;
+}
+
+form input:not([type=submit]) {
+	flex: 1;
+	/* fluid width */
+	display: block;
+	/* IE fix */
+	min-width: 0;
+	/* fix for min-width: auto */
+}
+/* 3- fluid textarea */
+div + div {
+	display: flex;
+	flex-direction: column;
+}
+
+textarea {
+	flex: 1;
+	/* fluid height */
+	display: block;
+	/* IE fix */
+}

@@ -1,10 +1,10 @@
+$mobile: new-breakpoint(max-width 480px);
+$desktop: new-breakpoint(min-width 850px);
+
 .movie-picker {
     @include outer-container;
     background-color: $color-mid-grey;
 }
-
-
-
 
 .movie-picker__section  {
 
@@ -13,13 +13,17 @@
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    padding-top: 3rem;
-    padding-bottom: 3rem;
+    padding: 4rem;
+    align-items:center;
 
 
+    @include media($mobile) {
+       @include span-columns(12);
+   }
 }
 
 .dropdown {
+
     padding-left: 0.5rem;
     padding-right: 0.5rem;
     $base-border-color: gainsboro !default;
@@ -41,11 +45,13 @@
     $dropdown-arrow-top-distance: 0;
     line-height: $base-line-height;
 
+
     .dropdown-container {
 
         display: inline-block;
         position: relative;
         text-align: center;
+
 
     }
 
