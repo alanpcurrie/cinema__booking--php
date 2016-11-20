@@ -34,7 +34,7 @@ elixir(mix => {
     mix.sass('app.scss')
        .webpack('app.js');
 });
-optimize images
+//optimize images
 if (elixir.config.production)(function(mix) {
     mix.imageOptimize();
 });

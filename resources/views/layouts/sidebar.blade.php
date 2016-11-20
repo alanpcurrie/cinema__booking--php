@@ -18,7 +18,7 @@
 			</ul>
 	</article>
 	<aside class="p-secondary">
-			<h2> @yield('title')</h2>
+			<h2> User Name</h2>
 			<form class = "admin-form" action="#">
 			<div>
 					<p>Your details</p>

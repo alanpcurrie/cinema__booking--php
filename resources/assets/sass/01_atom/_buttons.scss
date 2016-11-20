@@ -1,3 +1,25 @@
+%a-button {
+
+	display: inline-flex;
+	text-align: center;
+	text-decoration: none;
+	font-size: 20px;
+	color: white;
+	padding: 1rem 4rem;
+	letter-spacing: 0.1em;
+	border-radius: 3px;
+	@include transition(all 300ms);
+	padding: 20px;
+	cursor: pointer;
+
+
+}
+
+.a-button__large--red {
+@extend %a-button;
+
+}
+
 
 .a-moviepicker__button--red {
 display: inline-flex;

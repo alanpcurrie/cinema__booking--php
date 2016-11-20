@@ -17,7 +17,7 @@ class CreateMovieTable extends Migration
             $table->increments('id');
             $table->string('title');
             $table->string('description');
-
+            $table->int('rating');
             $table->timestamps();
         });
     }

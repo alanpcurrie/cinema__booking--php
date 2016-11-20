@@ -50,11 +50,11 @@
 
                         <div class="form-group">
                             <div class="col-md-8 col-md-offset-4">
-                                <button type="submit" class="btn btn-primary">
+                                <button type="submit" class="a-moviepicker__button--red-admin">
                                     Login
                                 </button>
 
-                                <a class="btn btn-link" href="{{ url('/password/reset') }}">
+                                <a class="a-moviepicker__button--red-admin" href="{{ url('/password/reset') }}">
                                     Forgot Your Password?
                                 </a>
                             </div>
