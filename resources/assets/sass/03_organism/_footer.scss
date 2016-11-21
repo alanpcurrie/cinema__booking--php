@@ -9,7 +9,9 @@
     $footer-disclaimer-color: transparentize($footer-color, 0.6);
     background: $footer-background;
     padding: ($base-spacing * 2) $gutter;
-    width: 100%;
+    width: 100% ;
+
+
 
     .footer-logo {
         margin-bottom: 2em;
@@ -22,9 +24,10 @@
 
     .footer-links {
         display: flex;
-        flex-wrap: wrap;
+        flex-wrap: wrap ;
         justify-content: center;
         margin-bottom: $base-spacing;
+
     }
 
     .footer-links {
@@ -33,6 +36,7 @@
             flex-shrink: 0;
             margin-bottom: $base-spacing * 2;
             padding: 0;
+
         }
 
         li {

@@ -4,33 +4,17 @@
             <nav id="multi-level-nav" class="multi-level-nav" role="navigation">
                 <ul>
                     <li><img class="nav-logo " src="" alt="icinema logo"></li>
-                    <li><a class="ink" href="#">Home</a></li>
-                    <li class="has-children">
-                        <a class="ink" href="#">About<button class="dropdown-toggle" aria-expanded="false"><span class="screen-reader-text">Expand child menu</span></button></a>
-                        <ul class="sub-menu">
-                            <li><a class="ink" href="">More</a></li>
-                            <li><a class="ink" href="">about</a></li>
-                            <li><a class="ink" href="">Edinburgh</a></li>
-                            <li><a class="ink" href="">College</a></li>
-                        </ul>
-                    </li>
-                    <li class="has-children">
-                        <a class="ink" href="#">Movies<button class="dropdown-toggle" aria-expanded="false"><span class="screen-reader-text">Expand child menu</span></button></a>
-                        <ul class="sub-menu">
-                            <li><a class="ink" href="">More</a></li>
-                            <li><a class="ink" href="">About</a></li>
-                            <li><a class="ink" href="">Edinburgh</a></li>
-                            <li><a class="ink" href="">College</a></li>
+                    <li><a href="#">Home</a></li>
+                    <li>
+                        <a href="#">About</a>
 
-                        </ul>
                     </li>
-                    <li><a class="ink" href="#">Locations<button class="dropdown-toggle" aria-expanded="false"><span class="screen-reader-text">Expand child menu</span></button></a>
-                        <ul class="sub-menu">
-                            <li><a class="ink" href="">More</a></li>
-                            <li><a class="ink" href="">About</a></li>
-                            <li><a class="ink" href="">Edinburgh</a></li>
-                            <li><a class="ink" href="">College</a></li>
-                        </ul>
+                    <li>
+                        <a href="#">Movies</a>
+
+                    </li>
+                    <li><a href="#">Locations</a>
+
                     </li>
                     <li><a class="ink" href="#">Contact</a></li>
                 </ul>

@@ -254,6 +254,13 @@ body {
   padding: 20px;
   cursor: pointer; }
 
+.a-button__large--red {
+  background-color: #BC8F8F; }
+  .a-button__large--red:hover {
+    box-shadow: 0 0 0 2px #FFF5EE, 0 0 0 4px #BC8F8F; }
+  .a-button__large--red:hover {
+    box-shadow: 0 0 0 2px #FFF5EE, 0 0 0 4px #BC8F8F; }
+
 .a-moviepicker__button--red {
   display: -webkit-inline-box;
   display: inline-flex;
@@ -532,7 +539,8 @@ form.a-search-bar {
   border: 1px solid gray;
   border-radius: 4px; }
 
-.admin-form input, .form-horizontal input, textarea {
+.admin-form input, .form-horizontal input,
+textarea {
   padding: 1.25rem;
   margin-bottom: 1rem;
   border: 1px solid #555;
@@ -541,11 +549,12 @@ form.a-search-bar {
   font-size: inherit;
   background: rgba(0, 0, 0, 0.02); }
 
-.admin-form input:focus, .form-horizontal input:focus, textarea:focus {
+.admin-form input:focus, .form-horizontal input:focus,
+textarea:focus {
   outline: none; }
 
 .admin-form input[type="submit"], .form-horizontal input[type="submit"] {
-  padding: .3em 1em;
+  padding: 0.3em 1em;
   background: #555;
   border: none;
   color: #fff;
@@ -554,7 +563,7 @@ form.a-search-bar {
 
 .admin-form label, .form-horizontal label {
   width: 5em;
-  margin-right: .5em;
+  margin-right: 0.5em;
   text-align: right; }
 
 .admin-form input[type="submit"], .form-horizontal input[type="submit"] {
@@ -599,6 +608,19 @@ form.a-search-bar {
       order: -1; }
   input {
     width: 100%; } }
+
+.admin {
+  position: relative;
+  height: 2rem;
+  text-align: left;
+  margin-top: 2rem;
+  cursor: pointer; }
+  .admin li {
+    padding-left: 1rem; }
+    .admin li:hover {
+      -webkit-transition: all 300ms ease-in-out;
+      transition: all 300ms ease-in-out;
+      background-color: #e9e9e9; }
 
 /*--------------------------------------------------------------
 Layouts
@@ -1322,13 +1344,6 @@ form input:not([type=submit]) {
   /* fix for min-width: auto */ }
 
 /* 3- fluid textarea */
-div + div {
-  display: -webkit-box;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  flex-direction: column; }
-
 textarea {
   -webkit-box-flex: 1;
   flex: 1;
