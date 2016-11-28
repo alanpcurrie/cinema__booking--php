@@ -324,7 +324,7 @@ form.a-search-bar {
     right: 0;
     bottom: 0;
     outline: none;
-    padding: 5px 10px; }
+    padding: 3px 10px; }
     form.a-search-bar button[type=submit] img {
       height: 16px;
       padding-right: 1.25rem;
@@ -703,7 +703,8 @@ textarea:focus {
 .hero {
   height: 50%;
   width: 100%;
-  padding-bottom: 2rem; }
+  padding-bottom: 2rem;
+  z-index: 0; }
 
 .background {
   width: 100%;
@@ -714,14 +715,15 @@ textarea:focus {
   background-blend-mode: screen;
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center center fixed; }
+  background-position: center center fixed;
+  z-index: 0; }
 
 /*  Basic Title  */
 h1 {
   position: absolute;
   top: 0;
   left: 0;
-  margin-top: 16rem;
+  margin-top: 22rem;
   width: 100%;
   font-family: "industry-inc-3d";
   letter-spacing: 14px;

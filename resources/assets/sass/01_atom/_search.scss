@@ -22,13 +22,13 @@ form.a-search-bar {
         padding: ($base-spacing / 3) ($base-spacing / 3);
         position: relative;
         transition: border-color;
-        width: 100%;
+        width:100%;
     }
 
     button[type=submit] {
         @include position(absolute, 0 0 0 null);
         outline: none;
-        padding: 5px 10px;
+        padding: 3px 10px;
 
         img {
             height: 16px;

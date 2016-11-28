@@ -13,13 +13,13 @@
   <div class="container">
     <ul>
       <li class="mobile-button"><a href="#">Menu</a></li>
-    <li><a href="#">About</a></li>
-    <li><a href="#">Work</a></li>
-    <li><a href="#">Methods</a></li>
-    <li><a href="#">Results</a></li>
-    <li><a href="#">Contact</a></li>
-    <li><a  href="#register">register</a></li>
-    <li><a  href="#login">login</a></li>
+    <li><a href="#">MOVIES</a></li>
+    <li><a href="#">ABOUT</a></li>
+    <li><a href="#">LOCATIONS</a></li>
+    <li><a href="#">SHOWING NOW</a></li>
+    <li><a href="#">CONTACT</a></li>
+    <li><a  href="#register">REGISTER</a></li>
+    <li><a  href="#login">LOGIN</a></li>
   </ul>
   </div>
 </nav>

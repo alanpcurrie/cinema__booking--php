@@ -2,6 +2,8 @@
 	height: 50%;
 	width: 100%;
 	padding-bottom: 2rem;
+	z-index: 0;
+
 }
 //no-repeat center center fixed;
 
@@ -14,6 +16,7 @@
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: center center fixed;
+	z-index: 0;
 }
 // .inner-scratch,
 // .outer-scratch {
@@ -60,7 +63,7 @@ h1 {
 	position: absolute;
 	top: 0;
 	left: 0;
-	margin-top: 16rem;
+	margin-top: 22rem;
 	width: 100%;
 	font-family: $font-heading-decorative;
 	letter-spacing: 14px;
