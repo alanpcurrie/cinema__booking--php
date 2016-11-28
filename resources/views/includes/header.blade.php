@@ -1,4 +1,36 @@
-<nav role="navigation">
+<header class="header">
+    <div class="container">
+      <p class="site-title"><img class="nav-logo " src="" alt="icinema logo"></p>
+    <span class="site-tagline"><form class="a-search-bar" role="search">
+      <input type="search" placeholder="Enter Search" />
+      <button type="submit">
+        <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/search-icon-black.png" alt="Search Icon">
+      </button>
+    </form></span>
+  </div>
+</header>
+<nav class="main-nav">
+  <div class="container">
+    <ul>
+      <li class="mobile-button"><a href="#">Menu</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Work</a></li>
+    <li><a href="#">Methods</a></li>
+    <li><a href="#">Results</a></li>
+    <li><a href="#">Contact</a></li>
+    <li><a  href="#register">register</a></li>
+    <li><a  href="#login">login</a></li>
+  </ul>
+  </div>
+</nav>
+
+
+
+
+
+
+
+{{-- <nav role="navigation">
     <section class="menu-section">
         <div class="nav-mixed menu ">
             <nav id="multi-level-nav" class="multi-level-nav" role="navigation">
@@ -40,4 +72,4 @@
         <!-- .mixed-menu -->
     </section>
     <!-- .menu-section -->
-</nav>
+</nav> --}}

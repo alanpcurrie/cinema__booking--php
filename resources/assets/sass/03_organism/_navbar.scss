@@ -1,353 +1,463 @@
-/*--------------------------------------------------------------
-Layouts
---------------------------------------------------------------*/
-.centered {
-    margin: 0 auto;
-    padding: 0 1em;
-}
-@media screen and (min-width: 52em) {
-    .centered {
-        max-width: 52em;
-    }
-}
-/* Base styles that apply to all menus */
-.menu {
-    position: fixed;
-    top: 0;
-    transition: top 0.6s ease-in-out;
-    width: 100%;
-    z-index: 999;
-    font-size: 1.2rem;
-    -webkit-box-shadow: 0 6px 6px -6px black;
-    -moz-box-shadow: 0 6px 6px -6px black;
-    box-shadow: 0 6px 6px -6px black;
-
-    ul {
-        list-style-type: none;
-        background: $color-mid-grey;
-        padding-left: 0.2rem;
-    }
-
-    li a {
-        display: block;
-        border-radius: 5px;
-        text-decoration: none;
-        color: white;
-        padding: 1em;
-
-        &:hover {
-            background: scale-color($color-mid-grey, $lightness: -5%);
-        }
-    }
-}
-
-
-    .multi-level-nav ul {
-        ul {
-            display: none;
-            position: absolute;
-            z-index: 100;
-
-            li {
-                -webkit-flex: 1 1 auto;
-                -ms-flex: 1 1 auto;
-                flex: 1 1 auto;
-            }
-        }
-
-        .toggled-on {
-            display: -webkit-flex;
-            display: -ms-flexbox;
-            display: flex;
-        }
-    }
-
-    .dropdown-toggle {
-        margin: 0;
-        padding: 0 0.5em;
-        border: 0;
-        font-family: 'FontAwesome';
-        content: "";
-        text-transform: lowercase;
-        /* Stop screen readers to read the text as capital letters */
-        background-color: transparent;
-
-        &:after {
-            position: relative;
-            top: 0;
-            left: 0;
-            width: 42px;
-            color: white;
-            content: "\f107";
-            line-height: 1em;
-        }
-
-        &:focus,
-        &:hover {
-            background: $color-mid-grey;
-        }
-
-        &.toggle-on:after {
-            content: "\f106";
-        }
-    }
-
-
-/* Styles for social media menu */
-/* Find src URL and add in correct social media icon. */
-.social-menu {
-    li a {
-        &:before {
-            font-family: 'Fontawesome';
-            -webkit-font-smoothing: antialiased;
-
-        }
-
-        //login
-        //---------------------
-
-        &[href*="#account"]::before {
-            content: '\f007';
-            padding-right: .2rem;
-        }
-
-        &[href*="#login"]::before {
-            content: '\f007';
-            padding-right: .4rem;
-        }
-
-
-        &[href*="#register"]::before {
-            content: '\f08e';
-            padding-right: .4rem;
-        }
-
-
-        //social
-        //---------------------
-
-        &[href*="dribbble.com"]::before {
-            content: '\f17d';
-        }
-
-        &[href*="facebook.com"]::before {
-            content: '\f09a';
-        }
-
-        &[href*="flickr.com"]::before {
-            content: '\f16e';
-        }
-
-        &[href*="foursquare.com"]::before {
-            content: '\f180';
-        }
-
-        &[href*="github.com"]::before {
-            content: '\f09b';
-        }
-
-        &[href*="plus.google.com"]::before {
-            content: '\f0d5';
-        }
-
-        &[href*="instagram.com"]::before {
-            content: '\f16d';
-        }
-
-        &[href*="jsfiddle.com"]::before {
-            content: '\f1cc';
-        }
-
-        &[href*="linkedin.com"]::before {
-            content: '\f0e1';
-        }
-
-        &[href*="pinterest.com"]::before {
-            content: '\f0d2';
-        }
-
-        &[href*="reddit.com"]::before {
-            content: '\f1a1';
-        }
-
-        &[href*="soundcloud.com"]::before {
-            content: '\f1be';
-        }
-
-        &[href*="stackoverflow.com"]::before {
-            content: '\f16c';
-        }
-
-        &[href*="tumblr.com"]::before {
-            content: '\f173';
-        }
-
-        &[href*="twitter.com"]::before {
-            content: '\f099';
-        }
-
-        &[href*="vimeo.com"]::before {
-            content: '\f194';
-        }
-
-        &[href*="vine.co"]::before {
-            content: '\f1ca';
-        }
-
-        &[href*="yelp.com"]::before {
-            content: '\f1e9';
-        }
-
-        &[href*="youtube.com"]::before {
-            content: '\f167';
-        }
-
-        &[href*="wordpress.com"]::before {
-            content: '\f19a';
-        }
-    }
-
-    ul {
-        display: -webkit-flex;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-flex-wrap: wrap;
-        -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-        -webkit-justify-content: flex-end;
-        -ms-flex-pack: end;
-        justify-content: flex-end;
-    }
-}
-/* Flexbox stuff */
-/* Styles for mixed menu (drop-down + social) */
-.nav-mixed {
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
+.header {
     background: $color-mid-grey;
-    -webkit-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    -webkit-justify-content: space-between;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-}
-/* Styles for Single Level Menu */
-@media screen and (max-width: 10em) {
-    .multi-level-nav ul ul li a {
-        padding-left: 2em;
+    color: white;
+    padding: 1rem;
+
+    .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
     }
 
-    .dropdown-toggle {
-        display: none;
+    .site-tagline,
+    .site-title {
+        font-weight: 400;
+    }
+    @media (max-width: 700px) {
+        .site-tagline,
+        .site-title {
+            width: 100%;
+            text-align: center;
+        }
+
+        .site-title {
+            margin: 0;
+        }
     }
 }
-@media screen and (min-width: 30em) {
-    .multi-level-nav {
-        ul {
-            display: -webkit-flex;
-            display: -ms-flexbox;
+// Navigation, including mobile version
+.main-nav {
+
+    background: lighten($color-mid-grey, 20);
+    color: white;
+    //transition: none;
+    a {
+        color: $color-white;
+        text-decoration: none;
+    }
+
+    li,
+    ul {
+        list-style: none;
+        margin: 0;
+    }
+
+    ul {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+
+
+        a {
+            padding: em(15px) em(35px);
             display: flex;
-            -webkit-flex-wrap: wrap;
-            -ms-flex-wrap: wrap;
-            flex-wrap: wrap;
-            -webkit-justify-content: space-between;
-            -ms-flex-pack: justify;
-            justify-content: space-between;
-        }
+            text-transform: uppercase;
 
-        li {
-            -webkit-flex: 1 0 auto;
-            -ms-flex: 1 0 auto;
-            flex: 1 0 auto;
-            position: relative;
-        }
-    }
 
-    li.has-children > a {
-        padding-right: 0;
-    }
-
-    .multi-level-nav ul {
-        ul {
-            display: none;
-            position: absolute;
-            z-index: 100;
-
-            li {
-                -webkit-flex: 1 1 auto;
-                -ms-flex: 1 1 auto;
-                flex: 1 1 auto;
+            &:focus,
+            &:hover {
+                background: lighten(grey, 25);
+                color: lighten(grey, 5);
             }
         }
 
-        .toggled-on {
-            display: -webkit-flex;
-            display: -ms-flexbox;
-            display: flex;
+        .mobile-button a {
+            position: absolute;
+            left: -99999em;
         }
     }
+    @media (max-width: 700px) {
+        ul {
+            flex-wrap: wrap;
+            justify-content: flex-start;
 
-    .dropdown-toggle {
-        margin: 0;
-        padding: 0 0.5em;
-        border: 0;
-        font-family: 'FontAwesome';
-        content: "";
-        text-transform: lowercase;
-        /* Stop screen readers to read the text as capital letters */
-        background-color: transparent;
+            a {
+                position: absolute;
+                left: -99999em;
+            }
 
-        &:after {
-            position: relative;
-            top: 0;
-            left: 0;
-            width: 42px;
-            color: white;
-            content: "\f107";
-            line-height: 1em;
+            &.open {
+                li {
+                    width: 100%;
+
+
+                    &.mobile-button a {
+                        background: lighten(red, 50);
+                        color: darken($color-white, 20);
+                    }
+                }
+
+                a {
+                    position: static;
+                }
+            }
+
+            .mobile-button {
+                a {
+                    position: static;
+                }
+            }
         }
 
-        &:focus,
-        &:hover {
-            background: $color-mid-grey;
+        a {
+            width: 100%;
         }
-
-        &.toggle-on:after {
-            content: "\f106";
-        }
-    }
-}
-/*--------------------------------------------------------------
-Accessibility
---------------------------------------------------------------*/
-/* Text meant only for screen readers */
-.screen-reader-text {
-    clip: rect(1px, 1px, 1px, 1px);
-    position: absolute !important;
-    height: 1px;
-    width: 1px;
-    overflow: hidden;
-
-    &:active,
-    &:focus,
-    &:hover {
-        background-color: #f1f1f1;
-        border-radius: 3px;
-        box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
-        clip: auto !important;
-        color: #21759b;
-        display: block;
-        font-size: 14px;
-        font-weight: bold;
-        height: auto;
-        left: 5px;
-        line-height: normal;
-        padding: 15px 23px 14px;
-        text-decoration: none;
-        top: 5px;
-        width: auto;
-        z-index: 100000;
     }
 }
+// /*--------------------------------------------------------------
+// Layouts
+// --------------------------------------------------------------*/
+// .centered {
+//     margin: 0 auto;
+//     padding: 0 1em;
+// }
+// @media screen and (min-width: 52em) {
+//     .centered {
+//         max-width: 52em;
+//     }
+// }
+// /* Base styles that apply to all menus */
+// .menu {
+//     position: fixed;
+//     top: 0;
+//     transition: top 0.6s ease-in-out;
+//     width: 100%;
+//     z-index: 999;
+//     font-size: 1.2rem;
+//     -webkit-box-shadow: 0 6px 6px -6px black;
+//     -moz-box-shadow: 0 6px 6px -6px black;
+//     box-shadow: 0 6px 6px -6px black;
+//
+//     ul {
+//         list-style-type: none;
+//         background: $color-mid-grey;
+//         padding-left: 0.2rem;
+//     }
+//
+//     li a {
+//         display: block;
+//         border-radius: 5px;
+//         text-decoration: none;
+//         color: white;
+//         padding: 1em;
+//
+//         &:hover {
+//             background: scale-color($color-mid-grey, $lightness: -5%);
+//         }
+//     }
+// }
+//
+//
+//     .multi-level-nav ul {
+//         ul {
+//             display: none;
+//             position: absolute;
+//             z-index: 100;
+//
+//             li {
+//                 -webkit-flex: 1 1 auto;
+//                 -ms-flex: 1 1 auto;
+//                 flex: 1 1 auto;
+//             }
+//         }
+//
+//         .toggled-on {
+//             display: -webkit-flex;
+//             display: -ms-flexbox;
+//             display: flex;
+//         }
+//     }
+//
+//     .dropdown-toggle {
+//         margin: 0;
+//         padding: 0 0.5em;
+//         border: 0;
+//         font-family: 'FontAwesome';
+//         content: "";
+//         text-transform: lowercase;
+//         /* Stop screen readers to read the text as capital letters */
+//         background-color: transparent;
+//
+//         &:after {
+//             position: relative;
+//             top: 0;
+//             left: 0;
+//             width: 42px;
+//             color: white;
+//             content: "\f107";
+//             line-height: 1em;
+//         }
+//
+//         &:focus,
+//         &:hover {
+//             background: $color-mid-grey;
+//         }
+//
+//         &.toggle-on:after {
+//             content: "\f106";
+//         }
+//     }
+//
+//
+// /* Styles for social media menu */
+// /* Find src URL and add in correct social media icon. */
+// .social-menu {
+//     li a {
+//         &:before {
+//             font-family: 'Fontawesome';
+//             -webkit-font-smoothing: antialiased;
+//
+//         }
+//
+//         //login
+//         //---------------------
+//
+//         &[href*="#account"]::before {
+//             content: '\f007';
+//             padding-right: .2rem;
+//         }
+//
+//         &[href*="#login"]::before {
+//             content: '\f007';
+//             padding-right: .4rem;
+//         }
+//
+//
+//         &[href*="#register"]::before {
+//             content: '\f08e';
+//             padding-right: .4rem;
+//         }
+//
+//
+//         //social
+//         //---------------------
+//
+//         &[href*="dribbble.com"]::before {
+//             content: '\f17d';
+//         }
+//
+//         &[href*="facebook.com"]::before {
+//             content: '\f09a';
+//         }
+//
+//         &[href*="flickr.com"]::before {
+//             content: '\f16e';
+//         }
+//
+//         &[href*="foursquare.com"]::before {
+//             content: '\f180';
+//         }
+//
+//         &[href*="github.com"]::before {
+//             content: '\f09b';
+//         }
+//
+//         &[href*="plus.google.com"]::before {
+//             content: '\f0d5';
+//         }
+//
+//         &[href*="instagram.com"]::before {
+//             content: '\f16d';
+//         }
+//
+//         &[href*="jsfiddle.com"]::before {
+//             content: '\f1cc';
+//         }
+//
+//         &[href*="linkedin.com"]::before {
+//             content: '\f0e1';
+//         }
+//
+//         &[href*="pinterest.com"]::before {
+//             content: '\f0d2';
+//         }
+//
+//         &[href*="reddit.com"]::before {
+//             content: '\f1a1';
+//         }
+//
+//         &[href*="soundcloud.com"]::before {
+//             content: '\f1be';
+//         }
+//
+//         &[href*="stackoverflow.com"]::before {
+//             content: '\f16c';
+//         }
+//
+//         &[href*="tumblr.com"]::before {
+//             content: '\f173';
+//         }
+//
+//         &[href*="twitter.com"]::before {
+//             content: '\f099';
+//         }
+//
+//         &[href*="vimeo.com"]::before {
+//             content: '\f194';
+//         }
+//
+//         &[href*="vine.co"]::before {
+//             content: '\f1ca';
+//         }
+//
+//         &[href*="yelp.com"]::before {
+//             content: '\f1e9';
+//         }
+//
+//         &[href*="youtube.com"]::before {
+//             content: '\f167';
+//         }
+//
+//         &[href*="wordpress.com"]::before {
+//             content: '\f19a';
+//         }
+//     }
+//
+//     ul {
+//         display: -webkit-flex;
+//         display: -ms-flexbox;
+//         display: flex;
+//         -webkit-flex-wrap: wrap;
+//         -ms-flex-wrap: wrap;
+//         flex-wrap: wrap;
+//         -webkit-justify-content: flex-end;
+//         -ms-flex-pack: end;
+//         justify-content: flex-end;
+//     }
+// }
+// /* Flexbox stuff */
+// /* Styles for mixed menu (drop-down + social) */
+// .nav-mixed {
+//     display: -webkit-flex;
+//     display: -ms-flexbox;
+//     display: flex;
+//     background: $color-mid-grey;
+//     -webkit-flex-wrap: wrap;
+//     -ms-flex-wrap: wrap;
+//     flex-wrap: wrap;
+//     -webkit-justify-content: space-between;
+//     -ms-flex-pack: justify;
+//     justify-content: space-between;
+// }
+// /* Styles for Single Level Menu */
+// @media screen and (max-width: 10em) {
+//     .multi-level-nav ul ul li a {
+//         padding-left: 2em;
+//     }
+//
+//     .dropdown-toggle {
+//         display: none;
+//     }
+// }
+// @media screen and (min-width: 30em) {
+//     .multi-level-nav {
+//         ul {
+//             display: -webkit-flex;
+//             display: -ms-flexbox;
+//             display: flex;
+//             -webkit-flex-wrap: wrap;
+//             -ms-flex-wrap: wrap;
+//             flex-wrap: wrap;
+//             -webkit-justify-content: space-between;
+//             -ms-flex-pack: justify;
+//             justify-content: space-between;
+//         }
+//
+//         li {
+//             -webkit-flex: 1 0 auto;
+//             -ms-flex: 1 0 auto;
+//             flex: 1 0 auto;
+//             position: relative;
+//         }
+//     }
+//
+//     li.has-children > a {
+//         padding-right: 0;
+//     }
+//
+//     .multi-level-nav ul {
+//         ul {
+//             display: none;
+//             position: absolute;
+//             z-index: 100;
+//
+//             li {
+//                 -webkit-flex: 1 1 auto;
+//                 -ms-flex: 1 1 auto;
+//                 flex: 1 1 auto;
+//             }
+//         }
+//
+//         .toggled-on {
+//             display: -webkit-flex;
+//             display: -ms-flexbox;
+//             display: flex;
+//         }
+//     }
+//
+//     .dropdown-toggle {
+//         margin: 0;
+//         padding: 0 0.5em;
+//         border: 0;
+//         font-family: 'FontAwesome';
+//         content: "";
+//         text-transform: lowercase;
+//         /* Stop screen readers to read the text as capital letters */
+//         background-color: transparent;
+//
+//         &:after {
+//             position: relative;
+//             top: 0;
+//             left: 0;
+//             width: 42px;
+//             color: white;
+//             content: "\f107";
+//             line-height: 1em;
+//         }
+//
+//         &:focus,
+//         &:hover {
+//             background: $color-mid-grey;
+//         }
+//
+//         &.toggle-on:after {
+//             content: "\f106";
+//         }
+//     }
+// }
+// /*--------------------------------------------------------------
+// Accessibility
+// --------------------------------------------------------------*/
+// /* Text meant only for screen readers */
+// .screen-reader-text {
+//     clip: rect(1px, 1px, 1px, 1px);
+//     position: absolute !important;
+//     height: 1px;
+//     width: 1px;
+//     overflow: hidden;
+//
+//     &:active,
+//     &:focus,
+//     &:hover {
+//         background-color: #f1f1f1;
+//         border-radius: 3px;
+//         box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+//         clip: auto !important;
+//         color: #21759b;
+//         display: block;
+//         font-size: 14px;
+//         font-weight: bold;
+//         height: auto;
+//         left: 5px;
+//         line-height: normal;
+//         padding: 15px 23px 14px;
+//         text-decoration: none;
+//         top: 5px;
+//         width: auto;
+//         z-index: 100000;
+//     }
+// }
