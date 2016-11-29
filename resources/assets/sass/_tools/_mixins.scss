@@ -1,5 +1,4 @@
-$visual-grid: false !default;
-//elements get appended with "__" and the $name
+$visual-grid: false !default; //elements get appended with "__" and the $name
 @mixin e($name) {
      @at-root &__#{$name}{
         @content;
@@ -11,9 +10,7 @@ $visual-grid: false !default;
         @content;
     }
 }
-
 //font weight mixin
-
 //usage
 //@include font-weight(weight);
 @mixin font-weight($weight) {

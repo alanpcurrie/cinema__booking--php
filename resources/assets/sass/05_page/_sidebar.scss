@@ -10,9 +10,9 @@ body {
 
 	.p-primary {
 		@include span-columns(4);
-		padding: 10rem;
+		padding: 6rem;
 		background-color: darken($color-white, 2%);
-		height: 100vh;
+		height:auto;
 		@include media($mobile) {
 			 @include span-columns(12);
 		}
@@ -20,9 +20,9 @@ body {
 
 	.p-secondary {
 		@include span-columns(8);
-		padding: 10rem 5rem 10rem 2.5rem;
+		padding: 6rem 5rem 10rem 2.5rem;
 		background-color: $color-white;
-		height: 100vh;
+		height:auto;
 		@include media($mobile) {
 			 @include span-columns(12);
 		}

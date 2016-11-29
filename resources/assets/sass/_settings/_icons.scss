@@ -1,0 +1,17 @@
+//login
+
+         [href*="#register"]::before {
+             content: '\f090';
+             padding-right: .4rem;
+             font-family: 'Fontawesome';
+            -webkit-font-smoothing: antialiased;
+
+         }
+
+         [href*="#login"]::before {
+             content: '\f2c0';
+             padding-right: .4rem;
+             font-family: 'Fontawesome';
+            -webkit-font-smoothing: antialiased;
+
+         }

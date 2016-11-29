@@ -48,6 +48,18 @@ small {
 pre {
   white-space: pre-wrap; }
 
+[href*="#register"]::before {
+  content: '\f090';
+  padding-right: .4rem;
+  font-family: 'Fontawesome';
+  -webkit-font-smoothing: antialiased; }
+
+[href*="#login"]::before {
+  content: '\f2c0';
+  padding-right: .4rem;
+  font-family: 'Fontawesome';
+  -webkit-font-smoothing: antialiased; }
+
 html {
   box-sizing: border-box; }
 
@@ -312,7 +324,7 @@ form.a-search-bar {
     box-sizing: border-box;
     display: block;
     font-size: 1em;
-    margin-top: .5em;
+    margin-top: 0.5em;
     padding: 0.5em 0.5em;
     position: relative;
     -webkit-transition: border-color;
@@ -324,7 +336,7 @@ form.a-search-bar {
     right: 0;
     bottom: 0;
     outline: none;
-    padding: 3px 10px; }
+    padding: 0 10px; }
     form.a-search-bar button[type=submit] img {
       height: 16px;
       padding-right: 1.25rem;
@@ -621,6 +633,8 @@ textarea:focus {
       -webkit-transition: all 300ms ease-in-out;
       transition: all 300ms ease-in-out;
       background-color: #e9e9e9; }
+      .admin li:hover:last-child {
+        background-color: #fafafa; }
 
 .header {
   background: #696969;
@@ -637,6 +651,8 @@ textarea:focus {
     -webkit-box-align: center;
     align-items: center;
     flex-wrap: wrap; }
+  .header .nav-logo {
+    cursor: pointer; }
   .header .site-tagline,
   .header .site-title {
     font-weight: 400; }
@@ -1121,9 +1137,9 @@ body {
     display: block;
     margin-right: 2.3576520234%;
     width: 31.7615653177%;
-    padding: 10rem;
+    padding: 6rem;
     background-color: #fafafa;
-    height: 100vh; }
+    height: auto; }
     .p-wrapper .p-primary:last-child {
       margin-right: 0; }
     @media screen and (max-width: 480px) {
@@ -1139,9 +1155,9 @@ body {
     display: block;
     margin-right: 2.3576520234%;
     width: 65.8807826589%;
-    padding: 10rem 5rem 10rem 2.5rem;
+    padding: 6rem 5rem 10rem 2.5rem;
     background-color: #ffffff;
-    height: 100vh; }
+    height: auto; }
     .p-wrapper .p-secondary:last-child {
       margin-right: 0; }
     @media screen and (max-width: 480px) {

@@ -1,0 +1,9 @@
+//set colour
+@function set-color($color) {
+    @if (lightness($color) > 40) {
+      @return #000;
+    }
+    @else {
+      @return #FFF;
+    }
+}

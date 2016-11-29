@@ -98,17 +98,23 @@ textarea:focus {
     @extend .admin-form;
 }
 
-.admin  {
+.admin {
     position: relative;
     height: 2rem;
     text-align: left;
     margin-top: 2rem;
     cursor: pointer;
-        li {
-            padding-left: 1rem;
-            &:hover {
+
+    li {
+        padding-left: 1rem;
+
+        &:hover {
             @include transition(all 300ms ease-in-out);
             background-color: lighten($color-mid-grey, 50);
+
+            &:last-child {
+                background-color: darken($color-white, 2%);
+            }
         }
     }
 }
