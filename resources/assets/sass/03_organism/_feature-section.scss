@@ -1,6 +1,6 @@
 .side-image {
-  margin-top: 20rem;
-  margin-bottom: 20rem;
+  margin-top: 7rem;
+  margin-bottom: 7rem;
   $base-line-height: 1.5em !default;
   $action-color: #477DCA !default;
   $dark-gray: #333 !default;
@@ -18,9 +18,10 @@
   }
 
   .images-wrapper {
-    background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png"),
-                linear-gradient($side-image-background-top, $side-image-background-bottom),
-                no-repeat $side-image-background-top scroll;
+    background: url("/images/predator-poster.jpg");
+        // background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png"),
+    //             linear-gradient($side-image-background-top, $side-image-background-bottom),
+    //             no-repeat $side-image-background-top scroll;
     background-color: $side-image-background-top;
     background-size: cover;
     border-bottom: $side-image-border;

@@ -4,15 +4,15 @@
 	<article class="p-primary">
 		<h2> @yield('title')</h2>
 			<ul class="admin">
-				<li>option 1</li>
+				<li>Update Movies</li>
 					<hr>
-				<li>option2</li>
+				<li>Update User Data</li>
 					<hr>
-				<li>option3</li>
+				<li>Manage Homepage </li>
 					<hr>
-				<li>option5</li>
+				<li>Security Settings</li>
 					<hr>
-				<li>option6</li>
+				<li>Account Settings</li>
 					<hr>
 					<li> <button class = "a-moviepicker__button--red-admin"><a href="#">logout</a></button></li>
 			</ul>
@@ -21,22 +21,22 @@
 			<h2> User Name</h2>
 			<form class = "admin-form" action="#">
 			<div>
-					<p>Your details</p>
+					<p>Movie entry</p>
 					<p>
-							<label for="name">Email Address</label>
+							<label for="name">Movie Title</label>
 							<input type="text" id="name" autofocus>
 					</p>
 					<p>
-							<label for="last-name">First Name </label>
+							<label for="last-name">Movie Blurb</label>
 							<input type="prenom" id="prenom">
 					</p>
 					<p>
-							<label for="last-name">Last Name</label>
+							<label for="last-name">Movie Description</label>
 							<input type="email" id="email">
 					</p>
 
 					<p>
-							<label for="last-name">Last Name</label>
+							<label for="last-name">Age Rating</label>
 							<input type="email" id="email">
 					</p>
 					<p>

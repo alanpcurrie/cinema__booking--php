@@ -1073,8 +1073,8 @@ h1 {
     text-align: center; }
 
 .side-image {
-  margin-top: 20rem;
-  margin-bottom: 20rem;
+  margin-top: 7rem;
+  margin-bottom: 7rem;
   background: #F9F9F9; }
   @media screen and (min-width: 53.75em) {
     .side-image {
@@ -1082,8 +1082,7 @@ h1 {
       width: 100%;
       table-layout: fixed; } }
   .side-image .images-wrapper {
-    background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png"), -webkit-linear-gradient(#B5EBEB, #5DAC5D), no-repeat #B5EBEB scroll;
-    background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png"), linear-gradient(#B5EBEB, #5DAC5D), no-repeat #B5EBEB scroll;
+    background: url("/images/predator-poster.jpg");
     background-color: #B5EBEB;
     background-size: cover;
     border-bottom: 1px solid rgba(38, 74, 38, 0.2);
@@ -1139,7 +1138,7 @@ body {
     width: 31.7615653177%;
     padding: 6rem;
     background-color: #fafafa;
-    height: auto; }
+    height: 100vh; }
     .p-wrapper .p-primary:last-child {
       margin-right: 0; }
     @media screen and (max-width: 480px) {
@@ -1157,7 +1156,7 @@ body {
     width: 65.8807826589%;
     padding: 6rem 5rem 10rem 2.5rem;
     background-color: #ffffff;
-    height: auto; }
+    height: 100vh; }
     .p-wrapper .p-secondary:last-child {
       margin-right: 0; }
     @media screen and (max-width: 480px) {

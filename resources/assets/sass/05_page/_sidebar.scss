@@ -12,7 +12,7 @@ body {
 		@include span-columns(4);
 		padding: 6rem;
 		background-color: darken($color-white, 2%);
-		height:auto;
+		height:100vh;
 		@include media($mobile) {
 			 @include span-columns(12);
 		}
@@ -22,7 +22,7 @@ body {
 		@include span-columns(8);
 		padding: 6rem 5rem 10rem 2.5rem;
 		background-color: $color-white;
-		height:auto;
+		height:100vh;
 		@include media($mobile) {
 			 @include span-columns(12);
 		}
@@ -31,6 +31,7 @@ body {
 
 form {
 	display: flex;
+
 }
 
 form > div {
