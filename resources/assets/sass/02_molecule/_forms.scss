@@ -98,7 +98,7 @@ textarea:focus {
     @extend .admin-form;
 }
 
-.admin {
+.m-admin-ul {
     position: relative;
     height: 2rem;
     text-align: left;
@@ -117,4 +117,30 @@ textarea:focus {
             }
         }
     }
+}
+
+
+.m-upload-area {
+  width: 90%;
+  margin-left: 5rem;
+  padding: 15px;
+  border: 1px solid $color-dark-grey;
+  background: rgba(0,0,0,0.7);
+  margin-top: 1rem;
+   transition: background 0.25s;
+  &:hover {
+      border: 1px solid $color-mid-grey;
+      background: rgba(0,0,0,0.6);
+  }
+}
+.m-dropZone {
+  border: 2px dashed $color-light-grey;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  padding: 50px;
+  text-align: center;
+  color: $color-light-grey;
+
+
+
 }

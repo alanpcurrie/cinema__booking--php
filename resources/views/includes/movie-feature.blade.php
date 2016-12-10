@@ -52,7 +52,7 @@
       <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png" alt="">
     </div>
     <div class="m-card-header">
-      First Card
+      Movie 1
     </div>
 
     <div class="m-card-copy">
@@ -65,7 +65,7 @@
       <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains-4.png" alt="">
     </div>
     <div class="m-card-header">
-      Another Card
+      Movie 2
     </div>
     <div class="m-card-copy">
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, officiis sunt neque facilis culpa molestiae necessitatibus delectus veniam provident.</p>
@@ -77,7 +77,7 @@
       <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains-3.png" alt="">
     </div>
     <div class="m-card-header">
-      The Last Card
+      Movie 3
     </div>
     <div class="m-card-copy">
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
@@ -94,7 +94,7 @@
       <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png" alt="">
     </div>
     <div class="m-card-header">
-      First Card
+      Movie 4
     </div>
 
     <div class="m-card-copy">
@@ -107,7 +107,7 @@
       <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains-4.png" alt="">
     </div>
     <div class="m-card-header">
-      Another Card
+      Movie 5
     </div>
     <div class="m-card-copy">
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, officiis sunt neque facilis culpa molestiae necessitatibus delectus veniam provident.</p>
@@ -119,7 +119,7 @@
       <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains-3.png" alt="">
     </div>
     <div class="m-card-header">
-      The Last Card
+      Movie 6
     </div>
     <div class="m-card-copy">
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>

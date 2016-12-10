@@ -15,7 +15,7 @@
 	background-blend-mode: screen; //multiply works well too...
 	background-size: cover;
 	background-repeat: no-repeat;
-	background-position: center center fixed;
+	background-position: center center;
 	z-index: 0;
 }
 // .inner-scratch,
@@ -58,7 +58,7 @@
 // 	animation: grain 0.5s steps(1) infinite;
 // 	background-size: contain;
 // }
-/*  Basic Title  */
+
 h1 {
 	position: absolute;
 	top: 0;

@@ -3,7 +3,7 @@
 <section class="p-wrapper">
 	<article class="p-primary">
 		<h2> @yield('title')</h2>
-			<ul class="admin">
+			<ul class="m-admin-ul">
 				<li>Update Movies</li>
 					<hr>
 				<li>Update User Data</li>
@@ -40,12 +40,16 @@
 							<input type="email" id="email">
 					</p>
 					<p>
-							<label for="last-name">Last Name</label>
+							<label for="last-name">Location</label>
 							<input type="email" id="email">
+					</p>
+					<p><div class="m-upload-area">
+  			  			<div class="m-dropZone">Drag Image Files Here</div>
+						</div>
 					</p>
 
 				<p>
-					<button class="a-moviepicker__button--red-admin" >Save
+					<button class="a-button__large--full-width " >Save
 					</button>
 				</p>
 			</form>
