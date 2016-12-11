@@ -51,8 +51,9 @@
     <div class="m-card-image">
       <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png" alt="">
     </div>
+
     <div class="m-card-header">
-      Movie 1
+    movie 1
     </div>
 
     <div class="m-card-copy">

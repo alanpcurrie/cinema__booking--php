@@ -13,13 +13,14 @@
 
 Route::get('/', 'PagesController@home');
 Route::get('about', 'PagesController@about');
-Route::get('contact', 'PagesController@contact');
-
 Route::get('feature', 'PagesController@feature');
 Route::get('admin', 'PagesController@admin');
+Route::get('locations', 'PagesController@locations');
+Route::get('showingnow', 'PagesController@showingnow');
+Route::get('contact', 'PagesController@contact');
+Route::get('kids', 'PagesController@kids');
+
 Route::get('movie', 'MovieController@index');
 
-
 Auth::routes();
-
 Route::get('/home', 'HomeController@index');

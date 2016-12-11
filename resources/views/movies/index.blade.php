@@ -1,12 +1,17 @@
 @extends('layout');
-
+@section('content')
+	  @include('includes.header')
 
 @section('content')
-		<div><h1>All Content</h1>	</div>
+		<div></div>
 		@foreach ($movies as $movie)
 			<div>
-						{{ $movie->id ." " . $movie->title }}
-
+					<h2>{{ $movie->id ." " . $movie->title }}</h2>
+						<p>{{ $movie->description }}</p>
+							<p>{{ $movie->rating }}</p>
 			</div>
 		@endforeach
+		@include('includes.footer')
+
+
 @stop
