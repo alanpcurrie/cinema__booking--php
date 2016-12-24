@@ -3,7 +3,7 @@ $desktop: new-breakpoint(min-width 850px);
 
 .movie-picker {
     @include outer-container;
-    background-color: $color-mid-grey;
+    background-color: $color-dark-grey;
 }
 
 .movie-picker__section  {

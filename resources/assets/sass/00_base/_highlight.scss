@@ -1,0 +1,20 @@
+.b-red-highlight {
+	color: $color-white;
+	text-align: center;
+	line-height: 1.8;
+	width: 34px;
+	height: 34px;
+	background: $color-danger;
+
+	&--round {
+		color: $color-white;
+		text-align: center;
+		line-height: 1.8;
+		width: 34px;
+		height: 34px;
+		background: $color-danger;
+		-moz-border-radius: 50px;
+		-webkit-border-radius: 50px;
+		border-radius: 50px;
+	}
+}

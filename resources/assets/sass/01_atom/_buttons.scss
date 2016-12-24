@@ -28,22 +28,19 @@
 .a-button__large--full-width {
 	@extend %a-button;
 	background-color: $color-rosy-brown;
-	width:25%;
+	width: 25%;
 	margin-top: 1.5rem;
 	margin-left: 5rem;
 	text-align: center;
-	display:block;
-
+	display: block;
 
 	&:hover {
 		box-shadow: 0 0 0 2px $color-seashell-white, 0 0 0 4px $color-rosy-brown;
 	}
 
-
-&:hover {
+	&:hover {
 		box-shadow: 0 0 0 2px $color-seashell-white, 0 0 0 4px $color-rosy-brown;
-
-}
+	}
 }
 
 .a-moviepicker__button--red {
@@ -83,5 +80,22 @@
 
 	&:hover {
 		box-shadow: 0 0 0 2px $color-mid-grey, 0 0 0 4px $color-rosy-brown;
+	}
+}
+
+.a-button__large--full-width-dark {
+	@extend %a-button;
+	background-color: $color-rosy-brown;
+	width: 100%;
+	margin-top: 1.5rem;
+	text-align: center;
+	display: block;
+
+	&:hover {
+		box-shadow: 0 0 0 2px $color-dark-grey, 0 0 0 4px $color-rosy-brown;
+	}
+
+	&:hover {
+		box-shadow: 0 0 0 2px $color-dark-grey, 0 0 0 4px $color-rosy-brown;
 	}
 }

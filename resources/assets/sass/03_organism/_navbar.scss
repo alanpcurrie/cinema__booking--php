@@ -1,50 +1,60 @@
-.o-header--flash{
-    display:block;
-    padding:.1rem;
-    background-color:$color-rosy-brown ;
+.o-header--flash {
+    display: block;
+    padding: 0.1rem;
+    background-color: $color-rosy-brown;
     width: 100%;
-    }
+}
 
-
-.header {
+.o-header {
     background: $color-grey-blue;
     color: white;
     padding: 1rem;
 
-    .container {
+
+    .o-container {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
         flex-wrap: wrap;
+
     }
 
-    .nav-logo {
+    .o-nav-logo {
         cursor: pointer;
     }
 
-    .site-tagline,
-    .site-title {
+    .o-site-tagline,
+    .o-nav-title {
         font-weight: 400;
     }
     @media (max-width: 700px) {
-        .site-tagline,
-        .site-title {
+        .o-site-tagline,
+        .o-nav-title {
             width: 100%;
             text-align: center;
         }
 
-        .site-title {
+        .o-nav-title{
             margin: 0;
+            display: flex;
+            padding-left: 1rem;
         }
     }
+}
+
+.o-nav-title--text {
+  @include font-weight(700);
+    margin-left:.5rem;
+    font-size: 1.5em;
+    font-family: $font-heading-primary;
 }
 // Navigation, including mobile version
 
 .main-nav {
     background: lighten($color-light-grey, 20);
     color: $color-black;
-    //transition: none;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
     a {
         color: $color-black;
         text-decoration: none;
@@ -62,7 +72,6 @@
         flex-direction: row;
         justify-content: center;
         width: 100%;
-
         a {
             padding: em(15px) em(35px);
             display: flex;
@@ -115,6 +124,33 @@
 
         a {
             width: 100%;
+        }
+    }
+}
+
+.o-header--authenticate {
+    display: flex;
+    padding: 1rem;
+    margin-left: auto;
+
+    p:first-of-type {
+        @include font-weight(700);
+        color: $color-white;
+        cursor: pointer;
+        margin-right: 1rem;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    p:last-of-type {
+        @include font-weight(700);
+        color: $color-rosy-brown;
+        cursor: pointer;
+
+        &:hover {
+            text-decoration: underline;
         }
     }
 }

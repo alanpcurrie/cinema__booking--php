@@ -1,8 +1,14 @@
 <div class="o-header--flash"></div>
-<header class="header">
-    <div class="container">
-      <span class="site-title"><img class="nav-logo" src="/images/logo.png"  alt="icinema logo"><p>ICINEMA</p></span>
-    <span class="site-tagline">
+<header class="o-header">
+    <div class="o-container">
+      <span class="o-nav-title"><img class="o-nav-logo" src="/images/logo.png"  alt="icinema logo"></span><span class="o-nav-title--text"><p>ICINEMA</p></span>
+      <span class="o-header--authenticate">
+        <p><a href="/register">REGISTER</a></p>
+        <p> <a href="/home">LOGIN</a></p>
+      </span>
+
+    <span class="o-site-tagline">
+
       <form class="a-search-bar" role="search">
         <input type="search" placeholder="Enter Search" />
         <button type="submit">
@@ -22,12 +28,7 @@
       <li><a href="/locations">LOCATIONS</a></li>
       <li><a href="/showingnow">SHOWING NOW</a></li>
       <li><a href="/contact">CONTACT</a></li>
-      <li>
-        <ul class = "main-nav--right">
-            <li><a href="/register">REGISTER</a></li>
-            <li><a href="/home">LOGIN</a></li>
-        </ul>
-      </li>
+
     </ul>
   </div>
 </nav>
