@@ -14,7 +14,7 @@
 					<hr>
 				<li>Account Settings</li>
 					<hr>
-					<li> <button class = "a-moviepicker__button--red-admin"><a href="#">logout</a></button></li>
+					<li> <button class = "a-moviepicker__button--red-admin"><a href="/logout">logout</a></button></li>
 			</ul>
 	</article>
 	<aside class="p-secondary">
@@ -49,7 +49,7 @@
 					</p>
 
 				<p>
-					<button class="a-button__large--full-width " >Save
+					<button type="submit" value="submit" class="a-button__large--full-width " >Save
 					</button>
 				</p>
 			</form>

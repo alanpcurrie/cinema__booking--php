@@ -133,7 +133,7 @@
     padding: 1rem;
     margin-left: auto;
 
-    p:first-of-type {
+    p:first-of-type  {
         @include font-weight(700);
         color: $color-white;
         cursor: pointer;
@@ -144,7 +144,7 @@
         }
     }
 
-    p:last-of-type {
+    p:last-of-type   {
         @include font-weight(700);
         color: $color-rosy-brown;
         cursor: pointer;
@@ -152,5 +152,6 @@
         &:hover {
             text-decoration: underline;
         }
+        
     }
 }

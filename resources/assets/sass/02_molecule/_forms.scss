@@ -6,15 +6,17 @@
     min-height: 100%;
 
     &__group {
-        background: #3A3F44;
+        background: $color-grey-blue;
         border-radius: 5px;
         box-shadow: 0 1.5px 0 0 rgba(0, 0, 0, 0.1);
-        width: 450px;
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: -ms-flexbox;
-        display: flex;
-        margin-bottom: 1rem;
+        width: 600px;
+        padding: 50px;
+        margin: 25px;
+
+        h2 {
+            color: $color-white;
+            padding-bottom: 3rem;
+        }
     }
 }
 
@@ -28,17 +30,28 @@
     }
 
     input {
+        &[type="date"],
+        &[type="email"],
         &[type="password"],
         &[type="submit"],
         &[type="text"] {
+            width: 100%;
+            border: 0;
+            color: inherit;
+            font: inherit;
+            margin: 0;
+            outline: 0;
+            padding: 0;
+            -webkit-transition: background-color 0.3s;
+            transition: background-color 0.3s;
             border-radius: 0.25rem;
             padding: 1rem;
-            color: #3A3F44;
+            color: $color-dark-grey;
         }
     }
 
     label {
-        background-color: #222222;
+        background-color: $color-black;
         border-bottom-right-radius: 0;
         border-top-right-radius: 0;
         padding-left: 1.25rem;
@@ -46,7 +59,51 @@
         color: #FFF;
     }
 
+    .m-form__label {
+        &--username {
+            &:before {
+                content: '\f007';
+                font: 14px fontawesome;
+                color: $color-white;
+            }
+        }
+
+        &--email {
+            &:before {
+                content: '\f003';
+                font: 14px fontawesome;
+                color: $color-white;
+            }
+        }
+
+        &--dob {
+            &:before {
+                content: '\f1fd';
+                font: 14px fontawesome;
+                color: white;
+            }
+        }
+
+        &--password {
+            &:before {
+                content: '\f023';
+                font: 14px fontawesome;
+                color: white;
+            }
+        }
+
+        &--password-confirm {
+            &:before {
+                content: '\f046';
+                font: 14px fontawesome;
+                color: white;
+            }
+        }
+    }
+
     input {
+        &[type="date"],
+        &[type="email"],
         &[type="password"],
         &[type="text"] {
             background-color: #ffffff;
@@ -61,41 +118,30 @@
             }
         }
 
-        &[type="password"] {
+        &[type="date"] {
             &:focus,
             &:hover {
                 background-color: #ffffff;
             }
         }
 
-        &[type="submit"] {
-            background-color: #00B9BC;
-            color: #eee;
-            font-weight: bold;
-            text-transform: uppercase;
-
+        &[type="password"] {
             &:focus,
             &:hover {
-                background-color: #197071;
+                background-color: #ffffff;
             }
-
-            &__username {}
-
-            &__dob {}
-
-            &__password {}
-
-            &__password-confirm {}
         }
     }
 }
 
-.m-form-field {
+.m-form-group {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
     margin-bottom: 1rem;
+
+    &__checkbox--remember {}
 }
 
 .hidden {
@@ -108,6 +154,14 @@
     position: absolute;
     width: 1px;
 }
+
+.m-help-block {
+    color: $color-danger;
+    padding: 0.2rem;
+    margin-left: 0.2rem;
+    border: 2px dashed $color-danger;
+}
+//admin-form
 
 .admin-form > div {
     padding: 2em;
@@ -254,6 +308,7 @@ textarea:focus {
     color: $color-light-grey;
 }
 //counter for selection quantity
+
 .m-button--will-increment {
     text-align: center;
     padding: 5px;
@@ -269,12 +324,9 @@ textarea:focus {
 input.qtyplus {
     width: 25px;
     height: 25px;
-
-    
 }
 
 input.qtyminus {
     width: 25px;
     height: 25px;
-
 }

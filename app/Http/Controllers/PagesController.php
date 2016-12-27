@@ -8,7 +8,6 @@ class PagesController extends Controller
     {
         return view('pages/home');
 
-        
     }
 
     public function about()
@@ -41,8 +40,8 @@ class PagesController extends Controller
         return view('/pages/kids');
     }
 
-    public function admin()
-    {
-        return view('/accounts/admin');
-    }
+    // public function admin()
+    // {
+    //     return view('/accounts/admin');
+    // }
 }

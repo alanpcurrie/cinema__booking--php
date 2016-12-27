@@ -2,9 +2,18 @@
 <header class="o-header">
     <div class="o-container">
       <span class="o-nav-title"><img class="o-nav-logo" src="/images/logo.png"  alt="icinema logo"></span><span class="o-nav-title--text"><p>ICINEMA</p></span>
+
       <span class="o-header--authenticate">
+      {{--CHECK IF USER IS LOGGED IN  --}}
+        @if (Auth::check())
+            <p>@role('Manager')
+              <p><li><a href="/admin">ADMIN</a></li></p>
+            @endrole
+              <p><li><a href="/logout">LOGOUT</a></li></p>
+        @else
         <p><a href="/register">REGISTER</a></p>
         <p> <a href="/home">LOGIN</a></p>
+        @endif
       </span>
 
     <span class="o-site-tagline">
@@ -27,6 +36,7 @@
       <li><a href="/about">ABOUT</a></li>
       <li><a href="/locations">LOCATIONS</a></li>
       <li><a href="/showingnow">SHOWING NOW</a></li>
+      <li><a href="/kids">KIDS </a></li>
       <li><a href="/contact">CONTACT</a></li>
 
     </ul>

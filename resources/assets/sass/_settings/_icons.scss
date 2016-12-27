@@ -15,3 +15,27 @@
             -webkit-font-smoothing: antialiased;
 
          }
+
+         [href*="/admin"]::before {
+             content: '\f2c0';
+             padding-right: .4rem;
+             font-family: 'Fontawesome';
+            -webkit-font-smoothing: antialiased;
+
+         }
+
+         [href*="/logout"]::before {
+             content: '\f2c0';
+             padding-right: .4rem;
+             font-family: 'Fontawesome';
+            -webkit-font-smoothing: antialiased;
+
+         }
+
+         [type*="submit"]::before {
+             content: '\f0c7';
+             padding-right: .4rem;
+             font-family: 'Fontawesome';
+            -webkit-font-smoothing: antialiased;
+
+         }
