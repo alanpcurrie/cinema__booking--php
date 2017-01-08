@@ -141,6 +141,7 @@
     display: flex;
     margin-bottom: 1rem;
 
+
     &__checkbox--remember {}
 }
 
@@ -296,6 +297,7 @@ textarea:focus {
     &:hover {
         border: 1px solid $color-mid-grey;
         background: rgba(0,0,0,0.6);
+        cursor:pointer;
     }
 }
 

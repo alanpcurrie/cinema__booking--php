@@ -1,4 +1,5 @@
 @extends('layout')
+@include('includes.header')
 @section('name', 'Edit a user')
 
 @section('content')

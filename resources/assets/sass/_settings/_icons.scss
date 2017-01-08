@@ -33,7 +33,15 @@
          }
 
          [type*="submit"]::before {
-             content: '\f0c7';
+             content: '\f058';
+             padding-right: .4rem;
+             font-family: 'Fontawesome';
+            -webkit-font-smoothing: antialiased;
+
+         }
+
+         [type*="reset"]::before {
+             content: '\f057 ';
              padding-right: .4rem;
              font-family: 'Fontawesome';
             -webkit-font-smoothing: antialiased;

@@ -9,6 +9,7 @@ require('./bootstrap');
 require ('./nav');
 require ('./dropdown');
 require ('./counter');
+require ('./whackamole');
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

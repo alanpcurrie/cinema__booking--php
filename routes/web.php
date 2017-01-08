@@ -23,18 +23,22 @@ Route::get('kids', 'PagesController@kids');
 //movie page route dynamically generated
 Route::get('movie', 'MovieController@index');
 
+
+//all Posts
+Route::get('/showing', 'ShowingController@index');
+//single Post
+Route::get('/showing/{slug?}', 'ShowingController@show');
+
 //authentication routes
 Auth::routes();
 Route::get('logout', 'Auth\LoginController@logout');
 Route::get('/home', 'HomeController@index');
 
-//Route::get('admin', 'PagesController@admin');
-
-//admin route group
+//login route
 Route::get('users/login', 'Auth\LoginController@showLoginForm');
 Route::post('users/login', 'Auth\LoginController@login');
 
-
+//admin route group
 Route::group(array('prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => 'manager'), function () {
       Route::get('/', 'PagesController@home');
 
@@ -45,5 +49,16 @@ Route::group(array('prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => 
       Route::get('roles', 'RolesController@index');
       Route::get('roles/create', 'RolesController@create');
       Route::post('roles/create', 'RolesController@store');
+
+
+      Route::get('posts', 'PostsController@index');
+      Route::get('posts/create', 'PostsController@create');
+      Route::post('posts/create', 'PostsController@store');
+      Route::get('posts/{id?}/edit', 'PostsController@edit');
+      Route::post('posts/{id?}/edit','PostsController@update');
+
+      Route::get('categories', 'CategoriesController@index');
+      Route::get('categories/create', 'CategoriesController@create');
+      Route::post('categories/create', 'CategoriesController@store');
 
 });

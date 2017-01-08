@@ -1,0 +1,13 @@
+%a-alert {
+	display: block;
+}
+
+.a-alert__success {
+	@extend %a-alert;
+
+}
+
+.a-alert__warn {
+	@extend %a-alert;
+
+}

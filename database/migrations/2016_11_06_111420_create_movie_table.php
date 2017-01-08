@@ -18,6 +18,7 @@ class CreateMovieTable extends Migration
             $table->string('title');
             $table->string('description');
             $table->integer('rating');
+            $table->binary('image');
             $table->timestamps();
         });
     }

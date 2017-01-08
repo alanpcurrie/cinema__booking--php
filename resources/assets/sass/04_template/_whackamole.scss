@@ -1,0 +1,53 @@
+.t-full-width-section {
+  height:100vh;
+  cursor: url('/svg/hammer.svg'), auto;
+  margin-top: 10%;
+
+}
+
+.t-score {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 0 3rem;
+  line-height: 1;
+  border-radius: 1rem;
+}
+
+.t-game {
+  width: 600px;
+  height: 400px;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+.t-hole {
+  flex: 1 0 33.33%;
+  overflow: hidden;
+  position: relative;
+  &:after {
+    display: block;
+    background: url('/svg/dirt.svg') bottom center no-repeat;
+
+    background-size: contain;
+    content: '';
+    width: 100%;
+    height: 70px;
+    position: absolute;
+    z-index: 2;
+    bottom: -30px;
+  }
+}
+
+.t-mole {
+  background: url('/svg/mole.svg') bottom center no-repeat;
+  background-size: 60%;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  height: 100%;
+  transition: all 0.4s;
+}
+
+.t-hole.up .t-mole {
+  top: 0;
+}

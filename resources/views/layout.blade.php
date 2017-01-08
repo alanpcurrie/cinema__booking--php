@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<title>icinema</title>
 
-		<script src="{{ elixir('js/app.js') }}"></script>
+
 
 		<script>
 		  (function(d) {
@@ -23,6 +23,6 @@
 	<body>
 
 		@yield('content')
-
+		<script src="{{ elixir('js/app.js') }}"></script>
 	</body>
 </html>
