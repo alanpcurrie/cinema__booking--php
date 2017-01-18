@@ -13,7 +13,7 @@
                 @endforeach
 
                 @if (session('status'))
-                    <div class="alert alert-success">
+                    <div class="flash-success">
                         {{ session('status') }}
                     </div>
                 @endif

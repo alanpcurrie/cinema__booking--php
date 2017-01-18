@@ -1,13 +1,32 @@
-%a-alert {
-	display: block;
-}
+$base-spacing: 1.5em !default;
+$flashes: ( "alert": #fff6bf, "error": #fbe3e4, "notice": #e5edf8, "success": #e6efc2, ) !default;
+@each $flash-type, $color in $flashes {
+    .flash-#{$flash-type} {
+        background-color: $color;
+        color: shade($color, 60%);
+        display: block;
+        margin-bottom: $base-spacing / 2;
+        padding: $base-spacing / 2;
+        text-align: center;
 
-.a-alert__success {
-	@extend %a-alert;
+        &--will-close {
+            color: shade($color, 70%);
+            text-decoration:none;
+            color: $color-mid-grey;
+            font: 2rem;
+            left:1rem;
+            text-shadow: 0 1px 0 $color-white;
+            top: 5px;
+            &:after {
+                font-family: 'Fontawesome';
+                -webkit-font-smoothing: antialiased;
+                content: '\f057';
+            }
 
-}
-
-.a-alert__warn {
-	@extend %a-alert;
-
+            &:focus,
+            &:hover {
+                color: shade($color, 90%);
+            }
+        }
+    }
 }

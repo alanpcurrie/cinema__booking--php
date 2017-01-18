@@ -9,11 +9,11 @@
             <form class="form-horizontal" method="post">
 
                 @foreach ($errors->all() as $error)
-                    <p class="alert alert-danger">{{ $error }}</p>
+                    <p class="flash-error">{{ $error }}</p>
                 @endforeach
 
                 @if (session('status'))
-                    <div class="alert alert-success">
+                    <div class="flash-success">
                         {{ session('status') }}
                     </div>
                 @endif

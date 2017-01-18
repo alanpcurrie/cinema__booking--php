@@ -1,9 +1,9 @@
 .m-featured-background {
 	$large-screen: 50em !default;
-
+	$small-screen: 15em !default;
 	@include background-image (url('/images/Rick-and-Morty.jpg') );
 	background-color: $color-black;
-	background-blend-mode:difference;
+	background-blend-mode: difference;
 	align-items: center;
 	background-position: right;
 	background-size: none;
@@ -20,15 +20,20 @@
 
 	.m-featured-background__content {
 		max-width: 30em;
-		word-wrap:normal;
+		word-wrap: normal;
 		text-align: center;
-		color:$color-white;
+		color: $color-white;
 		@include media($large-screen) {
 			text-align: left;
-			color:$color-white;
+			color: $color-white;
 			background-color: $color-dark-grey;
 			padding: 4em;
-
+		}
+		@include media($small-screen) {
+			text-align: left;
+			color: $color-white;
+			background-color: $color-dark-grey;
+			padding: 1.5em;
 		}
 	}
 }

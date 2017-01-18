@@ -2,6 +2,8 @@
 	@section('content')
 	  @include('includes.header')
 			<section class="b-heading--section">
+				 <div class="flash-success"> <span>This is a success message <button class="flash-success--will-close" href="#" @click="$emit('close')"></button></span></div>
+
 				<h1 class='b-h1--left'>movies showing now</h1>
 			</section>
 		@foreach ($movies as $movie)
@@ -10,8 +12,6 @@
 						<h2>{{ $movie->title }}</h2>
 							<p>{{ $movie->description }}</p>
 								<h4 class="b-red-highlight--round">{{ $movie->rating }}</h4>
-
-
 
 									<form id="will-increment" class="m-button--will-increment" method='POST' action='#'>
 
@@ -34,7 +34,7 @@
 					      			<input type='button' value='+' class='qtyplus' field='quantity' />
 											<button class ="a-button__large--full-width-dark">BOOK NOW</button>
 									</form>
-									
+
 			</section>
 		@endforeach
 	@include('includes.footer')

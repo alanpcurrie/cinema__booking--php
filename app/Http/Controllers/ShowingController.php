@@ -15,8 +15,11 @@ class ShowingController extends Controller
     public function index()
     {
         $posts = Post::all();
+
         return view('showing.index', compact('posts'));
     }
+
+    
 
     /**
      * Show the form for creating a new resource.

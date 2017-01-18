@@ -4,6 +4,7 @@
       <span class="o-nav-title"><img class="o-nav-logo" src="/images/logo.png"  alt="icinema logo"></span><span class="o-nav-title--text"><p>ICINEMA</p></span>
 
       <span class="o-header--authenticate">
+
         {{--CHECK IF USER IS LOGGED IN  --}}
           @if (Auth::check())
               @role('Manager')
@@ -14,10 +15,10 @@
               <p><a href="/register">REGISTER</a></p>
               <p> <a href="/home">LOGIN</a></p>
           @endif
+
       </span>
 
       <span class="o-site-tagline">
-
         <form class="a-search-bar" role="search">
           <input type="search" placeholder="Enter Search" />
           <button type="submit">

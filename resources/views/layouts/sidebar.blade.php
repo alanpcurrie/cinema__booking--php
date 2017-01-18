@@ -7,6 +7,8 @@
 					<hr>
 					<li><a href="/admin/users">Update User Data </a></li>
 					<hr>
+					<li><a href="/admin/roles/create">Create User Roles</a></li>
+					<hr>
 					<li><a href="/admin/posts/">All Posts</a></li>
 					<hr>
 					<li><a href="/admin/posts/create">Create a Post</a></li>
@@ -19,7 +21,8 @@
 			</ul>
 	</article>
 	<aside class="p-secondary">
-			<h2> User Name</h2>
+
+			<h2>{{ Auth::user()->name }}</h2>
 			<form class = "admin-form" action="#">
 			<div>
 

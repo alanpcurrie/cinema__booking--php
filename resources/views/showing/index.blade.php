@@ -5,12 +5,11 @@
 @section('content')
 
 
-    <div class="container col-md-8 col-md-offset-2">
+
 
         @if (session('status'))
-            <div class="alert alert-success">
+             <div class="flash-success"> <span>This is a success message <button class="flash--will-close" @click="$emit('close')"></button></span></div>
                 {{ session('status') }}
-            </div>
         @endif
 
         @if ($posts->isEmpty())
@@ -21,7 +20,8 @@
                     <div class="panel-heading">{!! $post->title !!}</div>
                     <div class="panel-body">
                         {!! mb_substr($post->description,0,500) !!}
-                        {!! $post->rating !!}
+                        <h4 class="b-red-highlight--round">{!! $post->rating !!}<h4/>
+                          <p>{!! $post->category!!}</p>
 
                     </div>
                 </div>
