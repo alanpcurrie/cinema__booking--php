@@ -4,7 +4,7 @@
 
 @section('content')
 
-  <form class="form-horizontal" method="post">
+  <form class="" method="post">
 
     @foreach ($errors->all() as $error)
         <p class="flash-danger">{{ $error }}</p>

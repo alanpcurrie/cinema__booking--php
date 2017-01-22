@@ -3,17 +3,16 @@
 @section('title', 'Create A New Category')
 
 @section('content')
-    <div class="container col-md-8 col-md-offset-2">
-        <div class="well well bs-component">
 
-            <form class="form-horizontal" method="post">
+
+            <form class="" method="post">
 
                 @foreach ($errors->all() as $error)
                     <p class="alert alert-danger">{{ $error }}</p>
                 @endforeach
 
                 @if (session('status'))
-                    <div class="alert alert-success">
+                    <div class="flash-success">
                         {{ session('status') }}
                     </div>
                 @endif
@@ -22,21 +21,17 @@
 
                 <fieldset>
                     <legend>Create a new category</legend>
-                    <div class="form-group">
-                        <label for="name" class="col-lg-2 control-label">Name</label>
-                        <div class="col-lg-10">
-                            <input type="text" class="form-control" id="name" name="name">
-                        </div>
-                    </div>
 
-                    <div class="form-group">
-                        <div class="col-lg-10 col-lg-offset-2">
+                        <label for="name" class="col-lg-2 control-label">Name</label>
+
+                            <input type="text" class="form-control" id="name" name="name">
+
+
+
                             <button type="reset" class="btn btn-default">Cancel</button>
                             <button type="submit" class="btn btn-primary">Submit</button>
-                        </div>
-                    </div>
+
                 </fieldset>
             </form>
-        </div>
-    </div>
+
 @endsection

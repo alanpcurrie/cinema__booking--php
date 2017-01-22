@@ -23,6 +23,13 @@ Route::get('kids', 'PagesController@kids');
 //movie page route dynamically generated
 Route::get('movie', 'MovieController@index');
 
+//tickets routes
+Route::get('/contact', 'TicketsController@create');
+Route::post('/contact', 'TicketsController@store');
+Route::get('/tickets', 'TicketsController@index');
+//display a single ticket
+Route::get('/ticket/{slug?}', 'TicketsController@show');
+
 
 //all Posts
 Route::get('/showing', 'ShowingController@index');
@@ -45,11 +52,10 @@ Route::group(array('prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => 
       Route::get('users', 'UsersController@index');
       Route::get('users/{id?}/edit', 'UsersController@edit');
       Route::post('users/{id?}/edit','UsersController@update');
-
+      
       Route::get('roles', 'RolesController@index');
       Route::get('roles/create', 'RolesController@create');
       Route::post('roles/create', 'RolesController@store');
-
 
       Route::get('posts', 'PostsController@index');
       Route::get('posts/create', 'PostsController@create');
@@ -62,3 +68,12 @@ Route::group(array('prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => 
       Route::post('categories/create', 'CategoriesController@store');
 
 });
+
+// Route::group(array( 'middleware' => 'member'), function () {
+// //tickets routes
+// Route::get('/contact', 'TicketsController@create');
+// Route::post('/contact', 'TicketsController@store');
+// Route::get('/tickets', 'TicketsController@index');
+// //display a single ticket
+// Route::get('/ticket/{slug?}', 'TicketsController@show');
+// });

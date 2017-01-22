@@ -7,9 +7,9 @@
 
         {{--CHECK IF USER IS LOGGED IN  --}}
           @if (Auth::check())
-              @role('Manager')
+            @role('Manager')
               <p><li><a href="/admin">ADMIN</a></li></p>
-              @endrole
+            @endrole
               <p><li><a href="/logout">LOGOUT</a></li></p>
           @else
               <p><a href="/register">REGISTER</a></p>
@@ -38,8 +38,16 @@
       <li><a href="/locations">LOCATIONS</a></li>
       <li><a href="/showing">SHOWING NOW</a></li>
       <li><a href="/kids">KIDS </a></li>
-      <li><a href="/contact">CONTACT</a></li>
+        {{--CHECK IF USER IS LOGGED IN  --}}
+      @if (Auth::check())
+        @role('user')
+        <li><a href="/contact">Book Tickets</a></li>
+        @endrole
 
+        @role('Manager')
+        <li><a href="/contact">Book Tickets</a></li>
+        @endrole
+      @endif
     </ul>
   </div>
 </nav>
