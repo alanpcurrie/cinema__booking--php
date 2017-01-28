@@ -1,28 +1,29 @@
 <section class ="t-full-width-section">
+  <section class = "t-full-width-section__heading">
+    <h1 class="alt-style ">Whack-a-mole! <span class="t-score">0</span></h1>
+     <button class="a-button__large--red-alt" onClick="startGame()">Start!</button>
+     </section>
 
-<h1>Whack-a-mole! <span class="t-score">0</span></h1>
- <button onClick="startGame()">Start!</button>
-
- <div class="t-game">
-	 <div class="t-hole t-hole1">
-		 <div class="t-mole"></div>
-	 </div>
-	 <div class="t-hole t-hole2">
-		 <div class="t-mole"></div>
-	 </div>
-	 <div class="t-hole t-hole3">
-		 <div class="t-mole"></div>
-	 </div>
-	 <div class="t-hole t-hole4">
-		 <div class="t-mole"></div>
-	 </div>
-	 <div class="t-hole t-hole5">
-		 <div class="t-mole"></div>
-	 </div>
-	 <div class="t-hole t-hole6">
-		 <div class="t-mole"></div>
-	 </div>
- </div>
+     <div class="t-game">
+    	 <div class="t-hole t-hole1">
+    		 <div class="t-mole"></div>
+    	 </div>
+    	 <div class="t-hole t-hole2">
+    		 <div class="t-mole"></div>
+    	 </div>
+    	 <div class="t-hole t-hole3">
+    		 <div class="t-mole"></div>
+    	 </div>
+    	 <div class="t-hole t-hole4">
+    		 <div class="t-mole"></div>
+    	 </div>
+    	 <div class="t-hole t-hole5">
+    		 <div class="t-mole"></div>
+    	 </div>
+    	 <div class="t-hole t-hole6">
+    		 <div class="t-mole"></div>
+    	 </div>
+     </div>
 </section>
 
 <script>

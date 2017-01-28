@@ -25,6 +25,19 @@
 	}
 }
 
+.a-button__large--red-alt {
+	@extend %a-button;
+	background-color: $color-vibrant-red;
+
+	&:hover {
+		box-shadow: 0 0 0 2px $color-seashell-white, 0 0 0 4px $color-vibrant-red;
+	}
+
+	&:hover {
+		box-shadow: 0 0 0 2px $color-seashell-white, 0 0 0 4px $color-vibrant-red;
+	}
+}
+
 .a-button__large--full-width {
 	@extend %a-button;
 	background-color: $color-rosy-brown;

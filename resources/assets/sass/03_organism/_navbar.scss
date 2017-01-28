@@ -3,6 +3,13 @@
     padding: 0.1rem;
     background-color: $color-rosy-brown;
     width: 100%;
+
+    &--alt-color {
+        display: block;
+        padding: 0.1rem;
+        background-color: $color-vibrant-red;
+        width: 100%;
+    }
 }
 
 .o-header {
@@ -10,42 +17,46 @@
     color: white;
     padding: 1rem;
 
+    &--alt-color {
+        color: white;
+        padding: 1rem;
+        background-color: $color-vibrant-blue;
+    }
+}
 
-    .o-container {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: wrap;
+.o-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
 
+.o-nav-logo {
+    cursor: pointer;
+}
+
+.o-nav-title,
+.o-site-tagline {
+    font-weight: 400;
+}
+@media (max-width: 700px) {
+    .o-nav-title,
+    .o-site-tagline {
+        width: 100%;
+        text-align: center;
     }
 
-    .o-nav-logo {
-        cursor: pointer;
-    }
-
-    .o-site-tagline,
     .o-nav-title {
-        font-weight: 400;
-    }
-    @media (max-width: 700px) {
-        .o-site-tagline,
-        .o-nav-title {
-            width: 100%;
-            text-align: center;
-        }
-
-        .o-nav-title{
-            margin: 0;
-            display: flex;
-            padding-left: 1rem;
-        }
+        margin: 0;
+        display: flex;
+        padding-left: 1rem;
     }
 }
 
 .o-nav-title--text {
-  @include font-weight(700);
-    margin-left:.5rem;
+    @include font-weight(700);
+    margin-left: 0.5rem;
     font-size: 1.5em;
     font-family: $font-heading-primary;
 }
@@ -55,6 +66,7 @@
     background: lighten($color-light-grey, 20);
     color: $color-black;
     box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+
     a {
         color: $color-black;
         text-decoration: none;
@@ -72,6 +84,7 @@
         flex-direction: row;
         justify-content: center;
         width: 100%;
+
         a {
             padding: em(15px) em(35px);
             display: flex;
@@ -133,7 +146,7 @@
     padding: 1rem;
     margin-left: auto;
 
-    p:first-of-type  {
+    p:first-of-type {
         @include font-weight(700);
         color: $color-white;
         cursor: pointer;
@@ -144,7 +157,7 @@
         }
     }
 
-    p:last-of-type   {
+    p:last-of-type {
         @include font-weight(700);
         color: $color-rosy-brown;
         cursor: pointer;
@@ -152,6 +165,33 @@
         &:hover {
             text-decoration: underline;
         }
-        
+    }
+}
+
+
+.o-header--authenticate--alt {
+    display: flex;
+    padding: 1rem;
+    margin-left: auto;
+
+    p:first-of-type {
+        @include font-weight(700);
+        color: $color-white;
+        cursor: pointer;
+        margin-right: 1rem;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    p:last-of-type {
+        @include font-weight(700);
+        color: $color-vibrant-red;
+        cursor: pointer;
+
+        &:hover {
+            text-decoration: underline;
+        }
     }
 }
