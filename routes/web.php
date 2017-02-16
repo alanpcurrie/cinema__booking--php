@@ -48,15 +48,21 @@ Route::post('users/login', 'Auth\LoginController@login');
 //admin route group
 Route::group(array('prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => 'manager'), function () {
       Route::get('/', 'PagesController@home');
-
+      Route::resource('users', 'UsersController', ['only' => [
+    'destroy'
+]]);
       Route::get('users', 'UsersController@index');
       Route::get('users/{id?}/edit', 'UsersController@edit');
       Route::post('users/{id?}/edit','UsersController@update');
+
 
       Route::get('roles', 'RolesController@index');
       Route::get('roles/create', 'RolesController@create');
       Route::post('roles/create', 'RolesController@store');
 
+      Route::resource('posts', 'PostsController', ['only' => [
+    'destroy'
+]]);
       Route::get('posts', 'PostsController@index');
       Route::get('posts/create', 'PostsController@create');
       Route::post('posts/create', 'PostsController@store');

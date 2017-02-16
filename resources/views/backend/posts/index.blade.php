@@ -35,6 +35,13 @@
                             <td>{!! $post->slug !!}</td>
                             <td>{!! $post->created_at !!}</td>
                             <td>{!! $post->updated_at !!}</td>
+                            <td>
+
+															{{ Form::open(array('url' => 'admin/posts/' . $post->id, 'class' => 'pull-right')) }}
+																	{{ Form::hidden('_method', 'DELETE') }}
+																	{{ Form::submit('Delete this post', array('class' => 'btn btn-warning')) }}
+															{{ Form::close() }}
+                         </td>
                         </tr>
                     @endforeach
                     </tbody>

@@ -8,7 +8,10 @@
         "php": ">=5.6.4",
         "laravel/framework": "5.3.*",
         "nothingworks/blade-svg": "^0.1.0",
-        "spatie/laravel-permission": "^1.5"
+        "spatie/laravel-permission": "^1.5",
+        "laravelcollective/bus": "^5.3.0",
+        "laravelcollective/html": "^5.3.0",
+        "nesbot/carbon": "^1.22"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

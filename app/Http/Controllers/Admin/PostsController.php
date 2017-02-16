@@ -112,15 +112,18 @@ class PostsController extends Controller
          return redirect(action('Admin\PostsController@edit', $post->id))->with('status', 'The post has been updated!');
      }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param int $id
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
-    }
+     /**
+      * Remove the specified resource from storage.
+      *
+      * @param int $id
+      *
+      * @return \Illuminate\Http\Response
+      */
+     public function destroy($id)
+     {
+
+         $post = Post::find($id);
+         $post->delete();
+         return redirect(action('Admin\PostsController@index', $post->id))->with('status', 'The post has been deleted!');
+     }
 }
