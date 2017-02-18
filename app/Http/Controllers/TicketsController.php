@@ -1,8 +1,5 @@
 <?php
-
 namespace App\Http\Controllers;
-
-
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Requests\TicketFormRequest;
@@ -10,8 +7,6 @@ use App\Ticket;
 use App\Post;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
-
-
 class TicketsController extends Controller
 {
     /**
@@ -23,12 +18,7 @@ class TicketsController extends Controller
     {
         $tickets = Ticket::all();
         return view('tickets.index', compact('tickets'));
-
     }
-
-
-
-
     /**
      * Show the form for creating a new resource.
      *
@@ -36,13 +26,9 @@ class TicketsController extends Controller
      */
     public function create()
     {
-
         $posts = Post::all();
-
         return view('tickets.create', compact('posts'));
-
     }
-
     /**
      * Store a newly created resource in storage.
      *
@@ -58,13 +44,9 @@ class TicketsController extends Controller
              //error handling still to implement for non logged in user
              'user_id'   => Auth::user()->id
          ));
-
          $ticket->save();
-
          return redirect('/contact')->with('status', 'Your ticket has been booked! Its unique id is: '.$slug);
-
      }
-
     /**
      * Display the specified resource.
      *
@@ -75,9 +57,7 @@ class TicketsController extends Controller
  {
      $ticket = Ticket::whereSlug($slug)->firstOrFail();
      return view('tickets.show', compact('ticket'));
-
  }
-
     /**
      * Show the form for editing the specified resource.
      *
@@ -88,7 +68,6 @@ class TicketsController extends Controller
     {
         //
     }
-
     /**
      * Update the specified resource in storage.
      *
@@ -100,7 +79,6 @@ class TicketsController extends Controller
     {
         //
     }
-
     /**
      * Remove the specified resource from storage.
      *

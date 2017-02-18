@@ -28,8 +28,11 @@ class AuthServiceProvider extends ServiceProvider
 
         User::created(function ($user) {
 
+            //if{  user -> dob is > than 18}
         $user->assignRole('Member');
-
+            //else{
+            //$user->assignRole('Junior');
+            //}
         });
     }
 }

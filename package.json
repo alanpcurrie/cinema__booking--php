@@ -30,6 +30,8 @@
     "bourbon-neat": "^1.8.0",
     "laravel-elixir-browsersync-official": "^1.0.0",
     "laravel-elixir-image-optimize": "^1.1.0",
-    "laravel-elixir-rollup-official": "^1.1.0"
+    "laravel-elixir-rollup-official": "^1.1.0",
+    "laravel-elixir-vue-2": "^0.3.0",
+    "vue": "^2.1.10"
   }
 }

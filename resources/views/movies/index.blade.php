@@ -1,6 +1,19 @@
 @extends('layout')
 	@section('content')
-	  @include('includes.header')
+		@if (!Auth::check())
+			@include('includes.header')
+		@endif
+		@if (Auth::check())
+			@role('Manager')
+				@include('includes.header')
+			@endrole
+			@role('Member')
+		  	@include('includes.header')
+			@endrole
+			@role('Junior')
+					@include('includes.header-alt')
+			@endrole
+		@endif
 			<section class="b-heading--section">
 				 <div class="flash-success"> <span>This is a success message <button class="flash-success--will-close" href="#" @click="$emit('close')"></button></span></div>
 

@@ -30,11 +30,14 @@
     <ul>
       <li class="mobile-button"><a href="#">Menu</a></li>
       <li><a href="/">HOME</a></li>
-      <li><a href="/movie">MOVIES</a></li>
       <li><a href="/about">ABOUT</a></li>
       <li><a href="/locations">LOCATIONS</a></li>
       <li><a href="/showing">SHOWING NOW</a></li>
-      <li><a href="/kids">KIDS </a></li>
+      @if (Auth::check())
+          @role('Junior')
+        <li><a href="/kids">KIDS </a></li>
+        @endrole
+      @endif
       @if (Auth::check())
         @role('Member')
           <li><a href="/contact">Book Tickets</a></li>

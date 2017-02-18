@@ -75,7 +75,16 @@ Route::group(array('prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => 
 
 });
 
-Route::group(array( 'middleware' => 'member' || 'manager'  ), function () {
+Route::group(array( 'middleware' => 'member'), function () {
+      //tickets routes
+      Route::get('/contact', 'TicketsController@create');
+      Route::post('/contact', 'TicketsController@store');
+      Route::get('/tickets', 'TicketsController@index');
+      //display a single ticket
+      Route::get('/ticket/{slug?}', 'TicketsController@show');
+});
+
+Route::group(array( 'middleware' => 'manager' ), function () {
       //tickets routes
       Route::get('/contact', 'TicketsController@create');
       Route::post('/contact', 'TicketsController@store');

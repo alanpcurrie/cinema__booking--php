@@ -10,6 +10,7 @@ require ('./nav');
 require ('./dropdown');
 require ('./counter');
 require ('./whackamole');
+require ('./print');
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

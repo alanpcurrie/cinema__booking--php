@@ -10,8 +10,9 @@
     @endforeach
 
         @if (session('status'))
-            <div class="flash-success">
-            {{ session('status') }}
+            <div id="printable" class="flash-success">
+              {{ session('status') }}
+              <a role="button" href="#" class="button radius large print">print me</a>
             </div>
         @endif
 
@@ -28,4 +29,5 @@
             <button type="submit" class="btn btn-primary">Submit</button>
         </fieldset>
   </form>
+
 @endsection
