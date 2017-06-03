@@ -46,7 +46,7 @@ Route::get('users/login', 'Auth\LoginController@showLoginForm');
 Route::post('users/login', 'Auth\LoginController@login');
 
 //admin route group
-Route::group(array('prefix' => 'admin', 'namespace' => 'Admin'), function () {
+Route::group(array('prefix' => 'admin', 'namespace' => 'Admin',  'middleware' => 'manager'), function () {
       Route::get('/', 'PagesController@home');
       Route::resource('users', 'UsersController', ['only' => [
     'destroy'
