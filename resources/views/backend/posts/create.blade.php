@@ -41,6 +41,10 @@
                                     <label for="age-rating">Age Rating</label>
                                     <input type="text" id="rating" name="rating">
                             </p>
+                            <p>
+                                    <label for="quantity">Quantity</label>
+                                    <input type="text" id="quantity" name="quantity">
+                            </p>
                             {{-- <p>
                                     <label for="Location">Location</label>
                                     <input type="text" id="location" name="location">

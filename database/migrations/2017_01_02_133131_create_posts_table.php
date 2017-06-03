@@ -17,7 +17,8 @@ class CreatePostsTable extends Migration
             $table->string('title', 255);
             $table->text('blurb');
             $table->text('description');
-            $table->tinyInteger('rating');
+            $table->tinyInteger('rating')->default(0);
+            $table->tinyInteger('quantity')->default(0);
             $table->binary('image')->nullable();
             $table->string('slug')->nullable();
             $table->tinyInteger('status')->default(1);

@@ -26,13 +26,13 @@ class AuthServiceProvider extends ServiceProvider
     {
         $this->registerPolicies();
 
-        User::created(function ($user) {
-
-            //if{  user -> dob is > than 18}
-        $user->assignRole('Member');
-            //else{
-            //$user->assignRole('Junior');
-            //}
-        });
+            // User::created(function ($user) {
+            //
+            // if ( $user -> $dob > 18)
+            // $user->assignRole('Member');
+            // else {
+            // $user->assignRole('Junior');
+            // }
+        // });
     }
 }

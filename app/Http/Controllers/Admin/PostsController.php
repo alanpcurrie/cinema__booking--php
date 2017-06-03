@@ -51,6 +51,7 @@ class PostsController extends Controller
         'description' => $request->get('description'),
         'blurb' => $request->get('blurb'),
         'rating' => $request->get('rating'),
+        'quantity' => $request->get('quantity'),
         'slug' => Str::slug($request->get('title'), '-'),
         'user_id' => $user_id,
     ));

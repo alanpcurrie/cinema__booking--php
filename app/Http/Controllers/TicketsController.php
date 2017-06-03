@@ -45,7 +45,8 @@ class TicketsController extends Controller
              'user_id'   => Auth::user()->id
          ));
          $ticket->save();
-         return redirect('/contact')->with('status', 'Your ticket has been booked! Its unique id is: '.$slug);
+         return redirect('/book')->with('status', 'Your ticket has been booked! Its unique id is: '.$slug);
+
      }
     /**
      * Display the specified resource.
@@ -87,6 +88,6 @@ class TicketsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $posts->quantity = $posts->quantity - 1;
     }
 }

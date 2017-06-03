@@ -17,6 +17,7 @@ class CreateTicketsTable extends Migration
             $table->string('slug')->nullable();
             $table->tinyInteger('status')->default(1);
             $table->integer('user_id')->nullable();
+            $table->integer('posts_id')->nullable();
             $table->timestamps();
  });
     }

@@ -40,7 +40,7 @@
       @endif
       @if (Auth::check())
         @role('Member')
-          <li><a href="/contact">Book Tickets</a></li>
+          <li><a href="/book">Book Tickets</a></li>
         @endrole
         @role('Manager')
           <li><a href="/contact">Book Tickets</a></li>
