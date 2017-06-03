@@ -84,7 +84,7 @@ Route::group(array( 'middleware' => 'member'), function () {
       Route::get('/ticket/{slug?}', 'TicketsController@show');
 });
 
-Route::group(array( 'middleware' => 'manager' ), function () {
+Route::group(array( 'middleware' => 'manager' || 'member' ), function () {
       //tickets routes
       Route::get('/contact', 'TicketsController@create');
       Route::post('/contact', 'TicketsController@store');
