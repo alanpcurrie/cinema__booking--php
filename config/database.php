@@ -53,18 +53,20 @@ return [
         ],
 
         'mysql' => [
-            'driver' => 'mysql',
-            'host' => env('DB_HOST', '185.14.184.77') . ('homestead' == gethostname() ? null : ':33060'),
-            'port' => env('DB_PORT', '33060'),
-            'database' => env('DB_DATABASE', 'homestead'),
-            'username' => env('DB_USERNAME', 'forge'),
-            'password' => env('DB_PASSWORD', '2uG8W7FciHEDYDRjRnch'),
-            'charset' => 'utf8',
-            'collation' => 'utf8_unicode_ci',
-            'prefix' => '',
-            'strict' => true,
-            'engine' => null,
+        'read' => [
+            'host' => '185.14.184.77',
         ],
+        'write' => [
+            'host' => '185.14.184.77'
+        ],
+        'driver'    => 'mysql',
+        'database'  => 'homestead',
+        'username'  => 'forge',
+        'password'  => '2uG8W7FciHEDYDRjRnch',
+        'charset'   => 'utf8',
+        'collation' => 'utf8_unicode_ci',
+        'prefix'    => '',
+    ],
 
         'pgsql' => [
             'driver' => 'pgsql',
