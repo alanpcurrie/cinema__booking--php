@@ -1314,6 +1314,54 @@ background-blend-mode: screen; */
       line-height: 1.5em;
       margin-bottom: 3em; }
 
+.side-image {
+  margin-top: 7rem;
+  margin-bottom: 7rem;
+  background: #F9F9F9; }
+  @media screen and (min-width: 53.75em) {
+    .side-image {
+      display: table;
+      width: 100%;
+      table-layout: fixed; } }
+  .side-image .images-wrapper__junior {
+    background: url("/images/bucky.jpg");
+    background-color: #B5EBEB;
+    background-size: cover;
+    border-bottom: 1px solid rgba(38, 74, 38, 0.2);
+    display: block;
+    min-height: 12em;
+    padding: 3em; }
+    @media screen and (min-width: 53.75em) {
+      .side-image .images-wrapper__junior {
+        display: table-cell;
+        width: 33.3333333333%;
+        background-position: bottom;
+        background-size: cover;
+        border-right: 1px solid rgba(38, 74, 38, 0.2); } }
+  .side-image .side-image-content {
+    display: table-cell;
+    width: 100%;
+    padding: 1em 1em 4em 1em; }
+    @media screen and (min-width: 53.75em) {
+      .side-image .side-image-content {
+        display: table-cell;
+        width: 66.6666666667%;
+        padding: 4em 4em 8em 4em; } }
+    .side-image .side-image-content h1 {
+      margin-bottom: 0.9em; }
+    .side-image .side-image-content h4 {
+      background: #BBB;
+      color: white;
+      display: inline-block;
+      font-size: 0.75em;
+      margin-bottom: 1.3em;
+      padding: 3px 8px;
+      text-transform: uppercase; }
+    .side-image .side-image-content p {
+      color: #333;
+      line-height: 1.5em;
+      margin-bottom: 3em; }
+
 .t-full-width-section {
   height: 100vh;
   cursor: url("/svg/hammer.svg"), auto;
