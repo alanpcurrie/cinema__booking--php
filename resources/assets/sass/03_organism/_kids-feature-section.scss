@@ -17,8 +17,8 @@
     @include row(table);
   }
 
-  .images-wrapper {
-    background: url("/images/predator-poster.jpg");
+  .images-wrapper__junior {
+    background: url("/images/bucky.jpg");
         // background: url("https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png"),
     //             linear-gradient($side-image-background-top, $side-image-background-bottom),
     //             no-repeat $side-image-background-top scroll;

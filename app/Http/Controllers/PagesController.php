@@ -40,5 +40,10 @@ class PagesController extends Controller
         return view('.pages.kids');
     }
 
+    public function kidsshowing()
+    {
+        return view('.pages.kidsshowing');
+    }
+
 
 }

@@ -19,6 +19,7 @@ Route::get('locations', 'PagesController@locations');
 Route::get('showingnow', 'PagesController@showingnow');
 Route::get('book', 'PagesController@book');
 Route::get('kids', 'PagesController@kids');
+Route::get('kidsshowing', 'PagesController@kidsshowing');
 
 //movie page route dynamically generated
 Route::get('movie', 'MovieController@index');

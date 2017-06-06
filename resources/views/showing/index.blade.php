@@ -22,18 +22,18 @@
                 {{ session('status') }}
         @endif
 
+
         @if ($posts->isEmpty())
             <p> There are no showings</p>
         @else
-            @foreach ($posts as $post)
-
+            @foreach ($posts as $post )
                 <h4>{!! $post->title !!}</h4>
-
                    <p>{!! mb_substr($post->description,0,500) !!}</p>
-                    <h4 class="b-red-highlight--round">{!! $post->rating !!}<h4/>
+                    <h4 class="b-red-highlight--round">{!! $post->rating  !!}<h4/>
                       <p>{!! $post->category!!}</p>
-            @endforeach
-        @endif
 
+            @endforeach
+
+        @endif
 
 @endsection

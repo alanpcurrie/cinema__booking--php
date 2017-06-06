@@ -22,17 +22,13 @@ class AuthServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function boot()
-    {
-        $this->registerPolicies();
+     public function boot()
+     {
+         $this->registerPolicies();
 
-            // User::created(function ($user) {
-            //
-            // if ( $user -> $dob > 18)
-            // $user->assignRole('Member');
-            // else {
-            // $user->assignRole('Junior');
-            // }
-        // });
-    }
-}
+         User::created(function ($user) {
+         $user->assignRole('Member');
+
+         });
+     }
+ }
